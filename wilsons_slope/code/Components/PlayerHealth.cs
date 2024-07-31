@@ -3,7 +3,7 @@ using Sandbox;
 public sealed class PlayerHealth : Component
 {
 	[Property] public float maxHealth { get; set; }
-	float currentHealth;
+	[Property]public float currentHealth {get; private set;}
 	protected override void OnStart()
 	{
 		currentHealth = maxHealth;

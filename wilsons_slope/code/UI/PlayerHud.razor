@@ -1,0 +1,34 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="vitals">
+		<p class="health">❤️@playerHealth.currentHealth</p>
+		<p class="timer">🕒@GetTimeString()</p>
+	</div>
+</root>
+
+@code
+{
+
+	[Property] PlayerTimer playerTimer {get; set;}
+	[Property] PlayerHealth playerHealth{get; set;}
+	[Property]	PlayerStateManager playerStateManager{get; set;}
+	
+
+	string GetTimeString()
+	{
+		var time = playerTimer.playerRoundTime.Relative;
+		var minutes = (int)time/60;
+		var seconds = (int)time % 60;
+		return $"{minutes:00}:{seconds:00}";
+
+		
+
+	}
+	protected override int BuildHash() 
+	{
+		return System.HashCode.Combine(playerHealth.currentHealth, GetTimeString());
+	}
+}
