@@ -1,5 +1,5 @@
 {
-  "__guid": "d35b2eae-e54f-4317-abf9-0435e64bfa79",
+  "__guid": "96dfd853-bb6d-4dfa-8357-6b84e2562d2e",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -210,12 +210,33 @@
         },
         {
           "__type": "PlayerTriggerListener",
-          "__guid": "0d72e196-a4ec-4727-adde-b02b52b919d6"
+          "__guid": "0d72e196-a4ec-4727-adde-b02b52b919d6",
+          "playerStateManager": {
+            "_type": "component",
+            "component_id": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
+            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
+            "component_type": "PlayerStateManager"
+          }
         },
         {
           "__type": "PlayerHealth",
           "__guid": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
+          "currentHealth": 0,
           "maxHealth": 100
+        },
+        {
+          "__type": "PlayerStateManager",
+          "__guid": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
+          "playerTimer": {
+            "_type": "component",
+            "component_id": "45d91dba-6305-44a3-b9f0-c40c5c1d6bcd",
+            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
+            "component_type": "PlayerTimer"
+          }
+        },
+        {
+          "__type": "PlayerTimer",
+          "__guid": "45d91dba-6305-44a3-b9f0-c40c5c1d6bcd"
         }
       ],
       "Children": [
@@ -277,7 +298,7 @@
                 "_type": "gameobject",
                 "go": "ea69b4b9-4c55-42bf-b9d4-cc18f19d6a87"
               },
-              "distance": 0,
+              "distance": 300,
               "headRef": {
                 "_type": "gameobject",
                 "go": "dec2ad02-2cbe-41da-9967-6fda3ae77b1c"
@@ -290,6 +311,94 @@
               }
             }
           ]
+        }
+      ]
+    },
+    {
+      "__guid": "d21b6b22-3100-4203-9ba6-ced3fecee729",
+      "Flags": 0,
+      "Name": "Screen",
+      "Position": "-81.30196,-126.0521,57.26855",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "e4f5f249-c50a-49e1-9e5c-c055ff971db5",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "PlayerHud",
+          "__guid": "3a972bbb-8933-4a8a-94d0-3e5cf097261e",
+          "playerHealth": {
+            "_type": "component",
+            "component_id": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
+            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
+            "component_type": "PlayerHealth"
+          },
+          "playerStateManager": {
+            "_type": "component",
+            "component_id": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
+            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
+            "component_type": "PlayerStateManager"
+          },
+          "playerTimer": {
+            "_type": "component",
+            "component_id": "45d91dba-6305-44a3-b9f0-c40c5c1d6bcd",
+            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
+            "component_type": "PlayerTimer"
+          }
+        }
+      ]
+    },
+    {
+      "__guid": "af54cd7d-67fa-4db8-bc48-6097e84be669",
+      "Flags": 0,
+      "Name": "Prop Test",
+      "Position": "-240.9425,-8.141901,174.0002",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "c0e18adc-0b7f-431e-a6fa-43057dbc5704",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "d136bfaa-a40d-488d-b61d-e18348acdff0",
+          "IsTrigger": false,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.ModelPhysics",
+          "__guid": "78f3bf65-98af-4846-addb-66cfe54ff36a",
+          "Locking": {},
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "e4bc9ec0-4109-4759-943c-d4734c6a5df6",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "df4eb5a2-3d5d-4a72-9b82-9f83ce221622"
         }
       ]
     }
@@ -318,6 +427,8 @@
   "Title": "minimal",
   "Description": "",
   "ResourceVersion": 1,
-  "__references": [],
+  "__references": [
+    "facepunch.bathtub"
+  ],
   "__version": 1
 }
