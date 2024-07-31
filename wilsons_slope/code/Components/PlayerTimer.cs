@@ -10,16 +10,7 @@ public sealed class PlayerTimer : Component
 	
 
 
-	protected override void OnUpdate()
-	{
-		while (playerStateManager.currentState == PlayerStateManager.PLAYER_STATES.STARTED)
-		{
-			if (playerRoundTime > 0f)
-			{
-				playerRoundTime = 0f;
-			}
-		}
-	}
+	
 	public void StartTimer()
 	{
 		playerCurrentRoundTime = playerRoundTime.Relative;
