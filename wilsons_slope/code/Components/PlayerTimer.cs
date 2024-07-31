@@ -1,26 +1,63 @@
+using System;
+using System.Security.Cryptography;
 using Sandbox;
 
 public sealed class PlayerTimer : Component
 {
-	public TimeSince playerRoundTime {get; private set;} // value used to see how long it took player to get to top
-	public float playerFinalRoundTime {get; private set;} // value used to see the player's time spent after they finished
-	public float playerCurrentRoundTime{get; private set;} 
-
-	[Property] public PlayerStateManager playerStateManager {get; private set;}
-	
+	public float playerCurrentTime { get; private set; }
+	public float playerFinishedTime { get; private set; }
+	public bool isTimerActive { get; private set; }
+	public TimeSince playerTimeSinceRoundStart{ get; private set; }
 
 
-	
+	protected override void OnStart()
+	{
+		isTimerActive = false; // placeholder for testing?
+	}
+
+
+	protected override void OnUpdate()
+	{
+		if(!isTimerActive)
+		{
+			playerTimeSinceRoundStart = 0f;	
+		}
+		else
+		{
+			playerCurrentTime = playerTimeSinceRoundStart.Relative;
+		}
+
+		
+		
+	}
+
+	public void RestartTimer()
+	{
+		playerCurrentTime = 0f; 
+	}
 	public void StartTimer()
 	{
-		playerCurrentRoundTime = playerRoundTime.Relative;
-		
-	}	
-	public void FinishTimer()
-	{
-		playerRoundTime = 0f;
-		playerCurrentRoundTime = playerRoundTime.Absolute;
-
+		isTimerActive = true;
 	}
+	public void StopTimer()
+	{
+		isTimerActive = false;
+	}
+	public float ReturnPlayerTime()
+	{
+		if(isTimerActive)
+		{
+			playerCurrentTime = playerTimeSinceRoundStart.Relative;
+			return playerCurrentTime;
+		}
+		else
+		{
+			playerCurrentTime = playerTimeSinceRoundStart.Absolute;
+			return playerCurrentTime;
+		}
+	}
+
+
+
 
 }

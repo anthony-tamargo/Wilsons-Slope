@@ -30,18 +30,19 @@ public sealed class PlayerStateManager : Component
 		{
 			case PLAYER_STATES.STARTED:
 			// before player crosses start line
+			playerTimer.RestartTimer();
 			break;
 			case PLAYER_STATES.IN_PROGRESS:
-			// player crosses start line, walking up slope
 			playerTimer.StartTimer();
+			// player crosses start line, walking up slope
 			break;
 			case PLAYER_STATES.FINISH:
-			playerTimer.FinishTimer();
+			playerTimer.StopTimer();
 			// player crosses finish line
 			break;
 			case PLAYER_STATES.DIED:
 			// player died to a prop
-			playerTimer.FinishTimer();
+			playerTimer.StopTimer();
 			break;
 		}
 	}

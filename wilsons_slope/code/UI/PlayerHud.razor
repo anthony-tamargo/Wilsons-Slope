@@ -5,7 +5,7 @@
 <root>
 	<div class="vitals">
 		<p class="health">❤️@playerHealth.currentHealth</p>
-		<p class="timer">🕒@GetTimeString()</p>
+		<p class="timer">🕒@GetCurrentTimeToString()</p>
 	</div>
 </root>
 
@@ -17,18 +17,15 @@
 	[Property]	PlayerStateManager playerStateManager{get; set;}
 	
 
-	string GetTimeString()
+	string GetCurrentTimeToString()
 	{
-		var time = playerTimer.playerRoundTime.Relative;
-		var minutes = (int)time/60;
-		var seconds = (int)time % 60;
+		var timer = playerTimer.playerCurrentTime;
+		var minutes = (int)timer/60;
+		var seconds = (int)timer%60;
 		return $"{minutes:00}:{seconds:00}";
-
-		
-
 	}
 	protected override int BuildHash() 
 	{
-		return System.HashCode.Combine(playerHealth.currentHealth, GetTimeString());
+		return System.HashCode.Combine(playerHealth.currentHealth, GetCurrentTimeToString() );
 	}
 }
