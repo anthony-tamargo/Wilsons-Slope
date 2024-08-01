@@ -10,6 +10,11 @@ public sealed class PropAccerlate : Component
 	}
 	protected override void OnStart()
 	{
-		rigidbody.Velocity = new Vector3 (-25f,0,0);
+		
+	}
+
+	protected override void OnUpdate()
+	{
+		
 	}
 }

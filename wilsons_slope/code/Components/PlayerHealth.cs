@@ -17,10 +17,12 @@ public sealed class PlayerHealth : Component
 			Death();
 		}
 	}
-	private void Death()
+	public void Death()
 	{
 		currentHealth = 0f;
 		GameObject.Destroy();
 	}
+
+
 
 }
