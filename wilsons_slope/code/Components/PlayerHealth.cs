@@ -4,11 +4,24 @@ public sealed class PlayerHealth : Component
 {
 	[Property] public float maxHealth { get; set; }
 	[Property]public float currentHealth {get; private set;}
+	[Property] public GameObject prefabDeathPoint { get; private set;}
+	Vector3 currentPlayerPos;
 	protected override void OnStart()
 	{
 		currentHealth = maxHealth;
 	}
 
+	protected override void OnUpdate()
+	{
+		if (GameObject is not null)
+		{
+			currentPlayerPos = GameObject.Transform.Position;
+		}
+		else
+		{
+			currentPlayerPos = currentPlayerPos;
+		}
+	}
 	public void Damage(float damage)
 	{
 		currentHealth -= damage;
@@ -19,6 +32,8 @@ public sealed class PlayerHealth : Component
 	}
 	public void Death()
 	{
+		var dp = prefabDeathPoint.Clone();
+		dp.Transform.Position = currentPlayerPos;
 		currentHealth = 0f;
 		GameObject.Destroy();
 	}

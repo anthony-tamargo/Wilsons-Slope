@@ -1,0 +1,66 @@
+{
+  "RootObject": {
+    "__guid": "ed1e6abd-3522-4922-8a40-cc9ecab79891",
+    "Flags": 0,
+    "Name": "deathpoint",
+    "Enabled": true,
+    "Children": [
+      {
+        "__guid": "00b595b7-9e45-4b3e-b46f-b8e0e2747164",
+        "Flags": 0,
+        "Name": "DeathPoint",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "23e53d8e-d202-4357-800d-8b5bd389243a",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,0,0,1"
+          },
+          {
+            "__type": "DeathCam",
+            "__guid": "748478f4-3030-4fd0-aa42-7f9a9e68e13f"
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "a54da587-55f6-4660-9cb5-f881d86e5927",
+            "Flags": 0,
+            "Name": "Camera",
+            "Position": "-218.9836,0,54.32742",
+            "Tags": "maincamera",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.CameraComponent",
+                "__guid": "146b52b7-cfe7-4e74-9fea-05771707ba43",
+                "BackgroundColor": "0.33333,0.46275,0.52157,1",
+                "ClearFlags": "All",
+                "FieldOfView": 60,
+                "IsMainCamera": true,
+                "Orthographic": false,
+                "OrthographicHeight": 1204,
+                "Priority": 1,
+                "RenderExcludeTags": "",
+                "RenderTags": "",
+                "TargetEye": "None",
+                "Viewport": "0,0,1,1",
+                "ZFar": 10000,
+                "ZNear": 10
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
