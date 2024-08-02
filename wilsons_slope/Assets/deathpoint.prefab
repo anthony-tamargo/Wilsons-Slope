@@ -9,13 +9,24 @@
         "__guid": "00b595b7-9e45-4b3e-b46f-b8e0e2747164",
         "Flags": 0,
         "Name": "DeathPoint",
-        "Position": "0,0,4.092081",
+        "Position": "0,0,10.47777",
         "Tags": "particles",
         "Enabled": true,
         "Components": [
           {
             "__type": "DeathCam",
             "__guid": "748478f4-3030-4fd0-aa42-7f9a9e68e13f"
+          },
+          {
+            "__type": "Sandbox.DecalRenderer",
+            "__guid": "4f51df23-29c7-429f-884e-3ae6d1e6f36a",
+            "CutoffAngle": 100,
+            "CutoffAngleSoftness": 20,
+            "Material": "blood_splatter_04_decal.vmat",
+            "Mod2XBlending": false,
+            "Size": "200,200,120",
+            "TintColor": "1,1,1,1",
+            "TriPlanar": false
           }
         ],
         "Children": [
@@ -55,6 +66,8 @@
   "MenuPath": null,
   "MenuIcon": null,
   "ResourceVersion": 1,
-  "__references": [],
+  "__references": [
+    "jase.bloodsplatter04"
+  ],
   "__version": 1
 }
