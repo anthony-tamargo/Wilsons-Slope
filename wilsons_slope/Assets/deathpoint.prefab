@@ -9,16 +9,10 @@
         "__guid": "00b595b7-9e45-4b3e-b46f-b8e0e2747164",
         "Flags": 0,
         "Name": "DeathPoint",
+        "Position": "0,0,4.092081",
+        "Tags": "particles",
         "Enabled": true,
         "Components": [
-          {
-            "__type": "Sandbox.ModelRenderer",
-            "__guid": "23e53d8e-d202-4357-800d-8b5bd389243a",
-            "BodyGroups": 18446744073709551615,
-            "Model": "models/dev/box.vmdl",
-            "RenderType": "On",
-            "Tint": "1,0,0,1"
-          },
           {
             "__type": "DeathCam",
             "__guid": "748478f4-3030-4fd0-aa42-7f9a9e68e13f"

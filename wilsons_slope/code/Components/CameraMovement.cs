@@ -38,8 +38,8 @@ public sealed class CameraMovement : Component
 			var camPos = headRef.Transform.Position + currentOffset;
 			if(!isFirstPerson)
 			{
-				var camForawrd = eyeAngles.ToRotation().Forward;
-				var camTrace = Scene.Trace.Ray(camPos , camPos - (camForawrd * distance))
+				var camFoward = eyeAngles.ToRotation().Forward;
+				var camTrace = Scene.Trace.Ray(camPos , camPos - (camFoward * distance))
 					.WithoutTags("player" , "trigger")
 					.Run();
 

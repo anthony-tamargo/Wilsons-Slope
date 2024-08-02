@@ -1,0 +1,494 @@
+{
+  "RootObject": {
+    "__guid": "404e0bdb-0ef6-4a80-8f93-2c66e25f1e6a",
+    "Flags": 0,
+    "Name": "deathpoint_gibs",
+    "Tags": "gibs",
+    "Enabled": true,
+    "Children": [
+      {
+        "__guid": "9b02bf08-acf5-4d25-a56d-9bab9fd785b2",
+        "Flags": 0,
+        "Name": "Head",
+        "Tags": "gibs",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "6098b2b8-ea65-4708-9ddf-e0dce0ac8c08",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_gibs/models/head_gib_cap.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "b3c4686f-8f85-4ee5-aed1-73b0f71026b2",
+            "IsTrigger": false,
+            "Model": "models/citizen_gibs/models/head_gib_cap.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelPhysics",
+            "__guid": "7bb5c86b-4d06-48f7-b932-6fae9d736eec",
+            "Locking": {},
+            "Model": "models/citizen_gibs/models/head_gib_cap.vmdl",
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "534adae0-d489-4e45-af0d-caf29218227a",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "55db9c59-31cc-4d2b-8c40-ce788004e6bf",
+        "Flags": 0,
+        "Name": "Torso",
+        "Tags": "gibs",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "072ccba2-9d32-42c8-8a2f-c2e9f93845cc",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_gibs/models/torso_gib_cap.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "d7fc8f17-e549-473d-a3b7-5c74b0ede9f3",
+            "IsTrigger": false,
+            "Model": "models/citizen_gibs/models/torso_gib_cap.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelPhysics",
+            "__guid": "e2968f9f-e0fc-434c-a3e6-d19df6b3efeb",
+            "Locking": {},
+            "Model": "models/citizen_gibs/models/torso_gib_cap.vmdl",
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "f9bb6867-51fb-4d26-b73d-3b7e4d972795",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "2ce61d8e-0ffb-4904-b59e-2ad2e514ab78",
+        "Flags": 0,
+        "Name": "L.Arm",
+        "Tags": "gibs",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "83aeb0ea-1fbc-476c-a0a7-f4bdeea8ac54",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_gibs/models/left_arm_gib_cap.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "8cb0af5c-a805-425d-90fc-9ce1920a3294",
+            "IsTrigger": false,
+            "Model": "models/citizen_gibs/models/left_arm_gib_cap.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelPhysics",
+            "__guid": "03acf318-1bed-4f32-b991-a8f4b52bd80f",
+            "Locking": {},
+            "Model": "models/citizen_gibs/models/left_arm_gib_cap.vmdl",
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "55c8c3b9-8e56-4d32-98af-f2ff171d6a05",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "8343d636-0bc0-4e59-af3b-9f98b559c3c4",
+        "Flags": 0,
+        "Name": "R.Arm",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "b5e47a03-129b-433f-ad2d-4e4b9fb7e999",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_gibs/models/right_arm_gib_cap.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "6b635821-5c48-4dc0-9578-7e359132d2e9",
+            "IsTrigger": false,
+            "Model": "models/citizen_gibs/models/right_arm_gib_cap.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelPhysics",
+            "__guid": "b14bc7ce-7187-4671-b4a5-8e35773fa623",
+            "Locking": {},
+            "Model": "models/citizen_gibs/models/right_arm_gib_cap.vmdl",
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "5277e8d7-3349-47bf-a674-b86085ebaccc",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "6e64b8cb-3760-448d-b8ad-231f78a052b1",
+        "Flags": 0,
+        "Name": "Pelvis",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "925456a5-33d0-45e7-bfcc-37b0c6beb058",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_gibs/models/pelvis_gib_cap.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "549fdef3-c82c-43cf-96be-87e94b727e2f",
+            "IsTrigger": false,
+            "Model": "models/citizen_gibs/models/pelvis_gib_cap.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelPhysics",
+            "__guid": "85d46ccd-4902-43b1-bc3b-666e43e19301",
+            "Locking": {},
+            "Model": "models/citizen_gibs/models/pelvis_gib_cap.vmdl",
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "b5cf3102-9f7f-4d16-9c69-ea2e39ac0d77",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "32aa6d23-dbfe-43ad-861b-5052325f8ea2",
+        "Flags": 0,
+        "Name": "L.Leg",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "3bb621c8-8d2f-468e-8321-aca859b2e98d",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_gibs/models/left_leg_gib_cap.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "fdea966c-4fca-4db4-89c9-07c3fa4bf402",
+            "IsTrigger": false,
+            "Model": "models/citizen_gibs/models/left_leg_gib_cap.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelPhysics",
+            "__guid": "95410c88-ac5a-4f77-911d-9785989c77ae",
+            "Locking": {},
+            "Model": "models/citizen_gibs/models/left_leg_gib_cap.vmdl",
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "ce09bdb3-19b3-4115-a447-c65d973105bc",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "b39a23ac-b5f4-4b37-bdeb-c4f18795e0bc",
+        "Flags": 0,
+        "Name": "R.Leg",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "d329dab8-0c0f-4633-a1cb-901056686b04",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_gibs/models/right_leg_gib_cap.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "7e640584-040d-4be3-9ec7-5f495c3ee57c",
+            "IsTrigger": false,
+            "Model": "models/citizen_gibs/models/right_leg_gib_cap.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelPhysics",
+            "__guid": "c42500df-e0a3-461e-9aa5-d6b84225e0a6",
+            "Locking": {},
+            "Model": "models/citizen_gibs/models/right_leg_gib_cap.vmdl",
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "93a43c7c-60b1-4028-9ecb-b08292a08e5a",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "87e6e283-2a77-480f-8b14-a2e488a95fe0",
+        "Flags": 0,
+        "Name": "L.Hand",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "8dd232a0-35ee-4586-9906-0a33cd9d5767",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_gibs/models/left_hand_gib_cap.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "ef6afa22-ad1b-40cf-821a-4403315927f4",
+            "IsTrigger": false,
+            "Model": "models/citizen_gibs/models/left_hand_gib_cap.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelPhysics",
+            "__guid": "1d4d3634-a6e8-4e91-b1df-b46c26a89f74",
+            "Locking": {},
+            "Model": "models/citizen_gibs/models/left_hand_gib_cap.vmdl",
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "60e4b5ae-cc85-4bf0-8b77-744cb253d825",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "e67d03ff-0e5a-41b7-b8c7-7aafda010552",
+        "Flags": 0,
+        "Name": "R.Hand",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "5a3be220-4389-494c-bba3-5b44f462ba6b",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_gibs/models/right_hand_gib_cap.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "8c97930b-6e7c-4850-b7d4-600a047f3cfd",
+            "IsTrigger": false,
+            "Model": "models/citizen_gibs/models/right_hand_gib_cap.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelPhysics",
+            "__guid": "c5fe4d8d-3ae2-4da2-b88d-6c5401439cda",
+            "Locking": {},
+            "Model": "models/citizen_gibs/models/right_hand_gib_cap.vmdl",
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "8fd6931b-5eb9-4776-a3b3-974d356fdc67",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "4abf15fb-634a-4647-b75a-7da5ec993b72",
+        "Flags": 0,
+        "Name": "L.Foot",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "7c42873e-e4dc-463b-ae0e-6d5d7868e463",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_gibs/models/left_foot_gib_cap.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "455096ff-6d9c-4ce2-8041-ae8b8a99b72e",
+            "IsTrigger": false,
+            "Model": "models/citizen_gibs/models/left_foot_gib_cap.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelPhysics",
+            "__guid": "ee215869-9ddd-447b-aa83-c71421087b4b",
+            "Locking": {},
+            "Model": "models/citizen_gibs/models/left_foot_gib_cap.vmdl",
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "dba31bb9-e313-4a22-bd47-9924b6c7db38",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "00e35732-1e2b-423a-999e-1592ec8460e8",
+        "Flags": 0,
+        "Name": "R.Foot",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "0def165d-4986-4c17-88df-fd315c06578d",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_gibs/models/right_foot_gib_cap.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "10c83b06-c24c-49e8-9269-348d13e461ed",
+            "IsTrigger": false,
+            "Model": "models/citizen_gibs/models/right_foot_gib_cap.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelPhysics",
+            "__guid": "e432731f-777b-4434-a689-0f96af5b43fe",
+            "Locking": {},
+            "Model": "models/citizen_gibs/models/right_foot_gib_cap.vmdl",
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "a814ffac-4745-4b68-b5c4-3b1793f88d3f",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

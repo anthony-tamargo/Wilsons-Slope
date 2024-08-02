@@ -58,6 +58,7 @@
       "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
       "Flags": 0,
       "Name": "Plane",
+      "Position": "3.046941,0,0",
       "Scale": "5,5,5",
       "Tags": "solid",
       "Enabled": true,
@@ -85,7 +86,7 @@
       "__guid": "0270a420-5c60-4d10-939e-fadc371cc23e",
       "Flags": 0,
       "Name": "Start ",
-      "Position": "-148.1294,8.317833,1.980635",
+      "Position": "19.5247,-16.33946,1.980635",
       "Scale": "-0.09999993,-7.699996,0.09999993",
       "Enabled": true,
       "Components": [
@@ -116,7 +117,7 @@
       "__guid": "53fc6b5d-0b9b-4913-95f5-3d2d0b3ade52",
       "Flags": 0,
       "Name": "Finish",
-      "Position": "234.4556,8.317833,1.980635",
+      "Position": "536.2266,-17.3542,149.0505",
       "Scale": "-0.09999993,-7.699996,0.09999993",
       "Enabled": true,
       "Components": [
@@ -149,6 +150,7 @@
       "Name": "Player",
       "Position": "-2.052856,-9.282333,37.26415",
       "Tags": "player,solid",
+      "Enabled": true,
       "Components": [
         {
           "__type": "Sandbox.CharacterController",
@@ -185,7 +187,7 @@
           "__guid": "a3991d5a-d4e2-48df-a5ab-039cf21a472a",
           "End": "0,0,60.30003",
           "IsTrigger": false,
-          "Radius": 13.2,
+          "Radius": 14.783722,
           "Start": "0,0,0",
           "Static": false
         },
@@ -228,7 +230,15 @@
           "__type": "PlayerHealth",
           "__guid": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
           "currentHealth": 0,
-          "maxHealth": 100
+          "maxHealth": 100,
+          "prefabDeathGibs": {
+            "_type": "gameobject",
+            "prefab": "deathpoint_gibs.prefab"
+          },
+          "prefabDeathPoint": {
+            "_type": "gameobject",
+            "prefab": "deathpoint.prefab"
+          }
         },
         {
           "__type": "PlayerStateManager",
@@ -363,7 +373,7 @@
       "__guid": "af54cd7d-67fa-4db8-bc48-6097e84be669",
       "Flags": 0,
       "Name": "Prop Test",
-      "Position": "1323.708,-46.364,698.4976",
+      "Position": "1730.858,-46.36396,797.3035",
       "Rotation": "0,0,1,-0.00000004371139",
       "Tags": "solid",
       "Enabled": true,
@@ -450,81 +460,6 @@
           "IsTrigger": false,
           "Scale": "101.0997,99.79961",
           "Static": true
-        }
-      ]
-    },
-    {
-      "__guid": "acb1bec0-5a4b-45a3-ae0d-432b00c1256c",
-      "Flags": 0,
-      "Name": "DeathPoint",
-      "Position": "0,0,26.50006",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "3c66ac22-2cff-4c6d-96e0-bbf1b5b832dd",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,0,0,1"
-        },
-        {
-          "__type": "DeathCam",
-          "__guid": "7b2b1838-58f7-4f98-9a78-e4b0fe2c4d17"
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "81ff1cd2-368e-4d46-a037-24be48752ae5",
-          "Flags": 0,
-          "Name": "Camera",
-          "Position": "-81.30196,-126.0521,30.7685",
-          "Tags": "maincamera",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.CameraComponent",
-              "__guid": "6cb98fac-0fd8-4d59-8751-faa75a505177",
-              "BackgroundColor": "0.33333,0.46275,0.52157,1",
-              "ClearFlags": "All",
-              "FieldOfView": 60,
-              "IsMainCamera": true,
-              "Orthographic": false,
-              "OrthographicHeight": 1204,
-              "Priority": 1,
-              "RenderExcludeTags": "",
-              "RenderTags": "",
-              "TargetEye": "None",
-              "Viewport": "0,0,1,1",
-              "ZFar": 10000,
-              "ZNear": 10
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "__guid": "482ba6ae-1a51-4655-a232-5a1c80b86ef1",
-      "Flags": 0,
-      "Name": "Cube",
-      "Position": "161.071,175.2224,26.67916",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "25864963-c365-483b-89e5-43963ab140ac",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "5b0f0f3f-bcd2-4f4b-bdaa-43237305d567",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false
         }
       ]
     }

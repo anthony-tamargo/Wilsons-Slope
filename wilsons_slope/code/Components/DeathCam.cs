@@ -53,7 +53,7 @@ public sealed class DeathCam : Component
 		
 				var camFoward = eyeAngles.ToRotation().Forward;
 				var camTrace = Scene.Trace.Ray(camPos , camPos - (camFoward * 300))
-					.WithoutTags("player" , "trigger")
+					.WithoutTags("player" , "trigger" , "gibs")
 					.Run();
 
 				if(camTrace.Hit	)
