@@ -370,11 +370,722 @@
       ]
     },
     {
+      "__guid": "0da3cfff-9db1-49f1-be8b-612d150e42ad",
+      "Flags": 0,
+      "Name": "Prop Test (5)",
+      "Position": "1938.089,-124.6063,971.2518",
+      "Rotation": "-0,0,-1,-0.00000004371139",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "1fafd505-c120-441f-b029-75249d5d457b",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "Off",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "4613b1ce-fa1e-491d-ad82-3ce82cbc520b"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "b3308879-728d-49b9-a419-419008ab8d7c",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "f7057fe3-3164-4f6e-8a12-d005d60a3d21",
+          "Flags": 0,
+          "Name": "Trigger Collider",
+          "Position": "0.00000002545073,-0.2911224,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TriggerObject",
+              "__guid": "e6415db0-e38b-4744-a313-04f4c079054d",
+              "triggerType": "PROP"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "b5ee3d23-22b1-46ef-bd47-c975237f066c",
+              "Center": "43.30009,0.09998777,16.60001",
+              "IsTrigger": true,
+              "Scale": "87.49984,39.89994,30.49999",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "f056e49e-e299-4ea6-a381-e27267474891",
+          "Flags": 0,
+          "Name": "Physics Collider",
+          "Position": "-0.0002441406,0.00001525881,14.14044",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "2ad29435-14b6-40cb-8835-c9f242b35a17",
+              "End": "0,0,77.90006",
+              "IsTrigger": false,
+              "Radius": 22.00003,
+              "Start": "0,0,0",
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "61773a93-4896-47f0-aa20-1f7149b71bae",
+      "Flags": 0,
+      "Name": "Prop Test (6)",
+      "Position": "1938.089,55.91147,971.2518",
+      "Rotation": "-0,0,-1,-0.00000004371139",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "9176d266-8680-4633-8e31-f7bca7c2fd65",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "Off",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "188e3f35-cd51-40c8-b7b8-e8cf67f6ecaa"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "a3ee0548-9946-4e4a-81f0-7d02cabf9e63",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "d4517f82-bcb7-4b45-baf5-ee4c04b90b46",
+          "Flags": 0,
+          "Name": "Trigger Collider",
+          "Position": "0.00000002545073,-0.2911224,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TriggerObject",
+              "__guid": "cffa096e-3002-465d-9dbc-e60b3a1d9730",
+              "triggerType": "PROP"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "f2ca4477-8bd7-4547-a3c6-819803575e55",
+              "Center": "43.30009,0.09998777,16.60001",
+              "IsTrigger": true,
+              "Scale": "87.49984,39.89994,30.49999",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "451d552b-e889-436e-b590-52a5c827200f",
+          "Flags": 0,
+          "Name": "Physics Collider",
+          "Position": "-0.0002441406,0.00001525881,14.14044",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "1a176fdb-ed21-4f5b-9dbb-ef130a984ca6",
+              "End": "0,0,77.90006",
+              "IsTrigger": false,
+              "Radius": 22.00003,
+              "Start": "0,0,0",
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "1efb14cb-9c72-41a5-a274-205335e3b8a8",
+      "Flags": 0,
+      "Name": "Prop Test (7)",
+      "Position": "1938.089,10.05278,971.2518",
+      "Rotation": "-0,0,-1,-0.00000004371139",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "0e75d3fc-7f25-44c6-bf35-ea71a98f30fc",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "Off",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "161664d8-6cf6-475b-b599-aa498a45ae58"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "123064a1-91c2-4458-8581-5a254f14df4f",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "a233ef44-f7e2-4a2f-8dd5-17475a8b858b",
+          "Flags": 0,
+          "Name": "Trigger Collider",
+          "Position": "0.00000002545073,-0.2911224,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TriggerObject",
+              "__guid": "8a84bd3f-dd21-4808-823a-31ee3a3bfb68",
+              "triggerType": "PROP"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "502f4de5-0d3f-4c86-8a83-d538603eb5f5",
+              "Center": "43.30009,0.09998777,16.60001",
+              "IsTrigger": true,
+              "Scale": "87.49984,39.89994,30.49999",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "be87ea15-bbe0-418b-99f3-94737619b2de",
+          "Flags": 0,
+          "Name": "Physics Collider",
+          "Position": "-0.0002441406,0.00001525881,14.14044",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "bfa8a227-7029-49d0-9125-41db30378ae6",
+              "End": "0,0,77.90006",
+              "IsTrigger": false,
+              "Radius": 22.00003,
+              "Start": "0,0,0",
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "6c5338bf-8f21-4bfc-9c0d-fa0c8294f45e",
+      "Flags": 0,
+      "Name": "Prop Test (8)",
+      "Position": "1938.089,-37.35159,971.2518",
+      "Rotation": "-0,0,-1,-0.00000004371139",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "1c6c1212-c848-470f-91ac-19963647b8bd",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "Off",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "f0e60427-0da4-49ab-89b9-68f5cffd4434"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "d4309e6f-3978-48d7-8a51-7ad4682872da",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "acbc8796-1b67-4552-bf67-a4728b20f070",
+          "Flags": 0,
+          "Name": "Trigger Collider",
+          "Position": "0.00000002545073,-0.2911224,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TriggerObject",
+              "__guid": "422d22f4-8c3e-435e-b188-2673be58be55",
+              "triggerType": "PROP"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "e0231a22-3813-4709-9c25-cf3750672bec",
+              "Center": "43.30009,0.09998777,16.60001",
+              "IsTrigger": true,
+              "Scale": "87.49984,39.89994,30.49999",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "7782ff7a-dd16-4937-87c8-21542210bea4",
+          "Flags": 0,
+          "Name": "Physics Collider",
+          "Position": "-0.0002441406,0.00001525881,14.14044",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "451187ff-e317-4699-8268-e51ace4d301f",
+              "End": "0,0,77.90006",
+              "IsTrigger": false,
+              "Radius": 22.00003,
+              "Start": "0,0,0",
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "3e98a644-54ec-4765-baf5-5170709b561c",
+      "Flags": 0,
+      "Name": "Prop Test (9)",
+      "Position": "1938.089,-81.56119,971.2518",
+      "Rotation": "-0,0,-1,-0.00000004371139",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "d5745fde-bc79-43ba-af07-8290ac24fd11",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "Off",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "6b1c51f1-208d-482b-9051-e51d53bf2b67"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "cdd71123-62cf-48a0-ae72-113a6474113e",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "562d481f-c132-4870-91b3-a1950abcc508",
+          "Flags": 0,
+          "Name": "Trigger Collider",
+          "Position": "0.00000002545073,-0.2911224,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TriggerObject",
+              "__guid": "d68c63cd-1ac1-4279-9212-cc8fcb605ce9",
+              "triggerType": "PROP"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "5d8d495c-3b10-4d29-951b-5e110ca02b78",
+              "Center": "43.30009,0.09998777,16.60001",
+              "IsTrigger": true,
+              "Scale": "87.49984,39.89994,30.49999",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "e62b6096-588d-47b6-9bdd-49f58a72f799",
+          "Flags": 0,
+          "Name": "Physics Collider",
+          "Position": "-0.0002441406,0.00001525881,14.14044",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "30333688-f128-4d3d-b78a-346e1be96fbc",
+              "End": "0,0,77.90006",
+              "IsTrigger": false,
+              "Radius": 22.00003,
+              "Start": "0,0,0",
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "38044eb6-b058-4585-894e-6ec2abd6c610",
+      "Flags": 0,
+      "Name": "Prop Test (4)",
+      "Position": "1735.125,-124.6063,952.7397",
+      "Rotation": "-0,0,-1,-0.00000004371139",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "ac0f01d7-180f-4791-9af8-546cf25e4270",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "Off",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "d5cf36bf-0b3b-41d8-ad10-f20b32d24f6e"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "c3a26a17-7726-4c2a-aa5b-912d11f80b2a",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "55a47063-fac4-4387-9e40-171db99595a8",
+          "Flags": 0,
+          "Name": "Trigger Collider",
+          "Position": "0.00000002545073,-0.2911224,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TriggerObject",
+              "__guid": "52c3858c-ce95-4ca8-bf9a-a2684b93e113",
+              "triggerType": "PROP"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "420b679a-7742-4da0-aff0-000555c90a3f",
+              "Center": "43.30009,0.09998777,16.60001",
+              "IsTrigger": true,
+              "Scale": "87.49984,39.89994,30.49999",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "da69cef8-a1ea-41e7-838f-f5570853c9bd",
+          "Flags": 0,
+          "Name": "Physics Collider",
+          "Position": "-0.0002441406,0.00001525881,14.14044",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "7a61a418-e9e9-4e77-8ce3-79d9aff6de27",
+              "End": "0,0,77.90006",
+              "IsTrigger": false,
+              "Radius": 22.00003,
+              "Start": "0,0,0",
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "291a75a7-42ce-43a7-b6c0-e6151348d14d",
+      "Flags": 0,
+      "Name": "Prop Test (3)",
+      "Position": "1735.125,55.91149,952.7397",
+      "Rotation": "-0,0,-1,-0.00000004371139",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "d1d2f260-c96e-4a6a-acde-9b244609b10d",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "Off",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "14e80407-cb4f-4fad-ae2c-bab99c13a59d"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "898a1f25-a5f6-46cb-9e2b-799fa893e538",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "c2ee0ca3-a197-4d5f-a605-e06ffa223806",
+          "Flags": 0,
+          "Name": "Trigger Collider",
+          "Position": "0.00000002545073,-0.2911224,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TriggerObject",
+              "__guid": "c43dd8fa-5199-4026-ad33-8cff417b7c67",
+              "triggerType": "PROP"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "d721a2b0-9ccf-42e8-93f1-47380e9a5ae6",
+              "Center": "43.30009,0.09998777,16.60001",
+              "IsTrigger": true,
+              "Scale": "87.49984,39.89994,30.49999",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "09d343e0-d9a2-473a-b93c-92f27b45522b",
+          "Flags": 0,
+          "Name": "Physics Collider",
+          "Position": "-0.0002441406,0.00001525881,14.14044",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "7e91b693-9a8b-4301-95dc-ac166f0fc855",
+              "End": "0,0,77.90006",
+              "IsTrigger": false,
+              "Radius": 22.00003,
+              "Start": "0,0,0",
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "13748cbe-fcd1-440c-b7e6-0bb8d1de8016",
+      "Flags": 0,
+      "Name": "Prop Test (2)",
+      "Position": "1735.125,10.0528,952.7397",
+      "Rotation": "-0,0,-1,-0.00000004371139",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "90d958c2-b2d1-4763-b0bb-35e8fc44b319",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "Off",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "08ce8207-0521-4fb9-8e0b-4ebdec262870"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "3838864a-4101-471c-a4ae-ea1c7485a84c",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "4fc28f66-6d4c-4c20-a40f-9d55f380a321",
+          "Flags": 0,
+          "Name": "Trigger Collider",
+          "Position": "0.00000002545073,-0.2911224,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TriggerObject",
+              "__guid": "68a9a3bb-8ec3-43c2-a799-9e462115e82c",
+              "triggerType": "PROP"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "14161fbf-ce59-450a-9212-8d1c90761d5d",
+              "Center": "43.30009,0.09998777,16.60001",
+              "IsTrigger": true,
+              "Scale": "87.49984,39.89994,30.49999",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "de03bf51-dd90-4671-8c5a-2bad9d0022cb",
+          "Flags": 0,
+          "Name": "Physics Collider",
+          "Position": "-0.0002441406,0.00001525881,14.14044",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "aeb41cc5-5677-47a3-9f6c-375a77e229bf",
+              "End": "0,0,77.90006",
+              "IsTrigger": false,
+              "Radius": 22.00003,
+              "Start": "0,0,0",
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "13f9c01f-eeab-4a46-b9f0-b188eb7583ab",
+      "Flags": 0,
+      "Name": "Prop Test (1)",
+      "Position": "1735.125,-37.35157,952.7397",
+      "Rotation": "-0,0,-1,-0.00000004371139",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "75725f9a-735c-4e21-9abe-1acf36013524",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "Off",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "36be7418-01ec-4c5e-a45d-55b2cc25fbf2"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "a0260c06-6f28-43f3-880c-54d27d523dfc",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "48624d22-03f5-43f0-afcb-868ada74c728",
+          "Flags": 0,
+          "Name": "Trigger Collider",
+          "Position": "0.00000002545073,-0.2911224,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TriggerObject",
+              "__guid": "f35de9b1-82c6-4fc7-ac36-052cf63cb16c",
+              "triggerType": "PROP"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "413aef40-59e9-4ece-8e3c-733a93bd452f",
+              "Center": "43.30009,0.09998777,16.60001",
+              "IsTrigger": true,
+              "Scale": "87.49984,39.89994,30.49999",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "506e06e7-4495-4cbc-a38e-66b959b48be4",
+          "Flags": 0,
+          "Name": "Physics Collider",
+          "Position": "-0.0002441406,0.00001525881,14.14044",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "f1d38356-1f24-48dd-a38a-33335deee934",
+              "End": "0,0,77.90006",
+              "IsTrigger": false,
+              "Radius": 22.00003,
+              "Start": "0,0,0",
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "__guid": "af54cd7d-67fa-4db8-bc48-6097e84be669",
       "Flags": 0,
       "Name": "Prop Test",
-      "Position": "1730.858,-46.36396,797.3035",
-      "Rotation": "0,0,1,-0.00000004371139",
+      "Position": "1735.125,-81.56117,952.7397",
+      "Rotation": "-0,0,-1,-0.00000004371139",
       "Tags": "solid",
       "Enabled": true,
       "Components": [
@@ -383,25 +1094,16 @@
           "__guid": "c0e18adc-0b7f-431e-a6fa-43057dbc5704",
           "BodyGroups": 18446744073709551615,
           "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
-          "RenderType": "On",
+          "RenderType": "Off",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "PropAccerlate",
-          "__guid": "df4eb5a2-3d5d-4a72-9b82-9f83ce221622",
-          "propAccelType": "SURFACE"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "3ffcf6c2-9876-4c8a-95cf-8d3a0849e157",
-          "IsTrigger": false,
-          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
-          "Static": false,
-          "Surface": "surfaces/slippy_wheels.surface"
+          "__guid": "df4eb5a2-3d5d-4a72-9b82-9f83ce221622"
         },
         {
           "__type": "Sandbox.Rigidbody",
-          "__guid": "80650d96-8e55-450c-80d0-ab83ba4f7f58",
+          "__guid": "dce3a90c-a5f1-484a-a330-a90df5bb2400",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -416,158 +1118,42 @@
         {
           "__guid": "a8f05332-8992-4372-b2e6-11f1aeff9af0",
           "Flags": 0,
-          "Name": "Object",
-          "Position": "0,0,0",
+          "Name": "Trigger Collider",
+          "Position": "0.00000002545073,-0.2911224,0",
           "Tags": "trigger",
           "Enabled": true,
           "Components": [
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "9d1cfec1-fad0-4033-9f39-8173e0492ebc",
-              "IsTrigger": true,
-              "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
-              "Static": false
-            },
             {
               "__type": "TriggerObject",
               "__guid": "e9bc5d21-ae6a-43eb-b947-909297259fa4",
               "triggerType": "PROP"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "e456de27-bb1a-42e4-a7bc-817903caf503",
+              "Center": "43.30009,0.09998777,16.60001",
+              "IsTrigger": true,
+              "Scale": "87.49984,39.89994,30.49999",
+              "Static": false
             }
           ]
-        }
-      ]
-    },
-    {
-      "__guid": "536a771d-05a2-4f38-8472-91424eb171a4",
-      "Flags": 0,
-      "Name": "Prop Test (1)",
-      "Position": "1730.858,-96.78593,797.3035",
-      "Rotation": "0.04864816,0.7123347,0.5539556,-0.4281891",
-      "Tags": "solid",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "6bec65fb-8b9d-4084-8020-1e0709830266",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
         },
         {
-          "__type": "PropAccerlate",
-          "__guid": "6848c63c-79b6-4f59-8a74-7bcdf310c41b",
-          "propAccelType": "SURFACE"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "0d2de0d1-cf98-4afe-a086-30afe57d121e",
-          "IsTrigger": false,
-          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
-          "Static": false,
-          "Surface": "surfaces/slippy_wheels.surface"
-        },
-        {
-          "__type": "Sandbox.Rigidbody",
-          "__guid": "10c56837-103c-4d42-9a89-d748ef695fb0",
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "MassOverride": 0,
-          "MotionEnabled": true,
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "8c22f410-e00b-4716-8e40-36f5f134f70a",
+          "__guid": "9a54189c-1ac0-4d4f-aa31-d802d9757cf3",
           "Flags": 0,
-          "Name": "Object",
-          "Position": "0,0,0",
-          "Tags": "trigger",
+          "Name": "Physics Collider",
+          "Position": "-0.0002441406,0.00001525881,14.14044",
+          "Rotation": "0,0.7071068,0,0.7071068",
           "Enabled": true,
           "Components": [
             {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "1266dbc3-46bc-436a-a125-f6c066145a10",
-              "IsTrigger": true,
-              "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "c2647d29-36e1-48c9-a710-cbaee609e234",
+              "End": "0,0,77.90006",
+              "IsTrigger": false,
+              "Radius": 22.00003,
+              "Start": "0,0,0",
               "Static": false
-            },
-            {
-              "__type": "TriggerObject",
-              "__guid": "f8cfdfcc-9e9b-4b13-91e6-7a1dbdab7969",
-              "triggerType": "PROP"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "__guid": "0e7953a7-1526-4674-ae33-764142fa9f89",
-      "Flags": 0,
-      "Name": "Prop Test (2)",
-      "Position": "1730.858,25.73827,797.3035",
-      "Rotation": "0,0,1,-0.00000004371139",
-      "Tags": "solid",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "7d915ecb-42ae-4012-811d-ec05e11bdd78",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "PropAccerlate",
-          "__guid": "29fd6d16-46b8-44dd-8161-0d40a32e49e4",
-          "propAccelType": "SURFACE"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "0b63e0ab-854a-42b0-a589-f9db22b826ad",
-          "IsTrigger": false,
-          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
-          "Static": false,
-          "Surface": "surfaces/slippy_wheels.surface"
-        },
-        {
-          "__type": "Sandbox.Rigidbody",
-          "__guid": "6fefb7cc-2abb-4bf1-a782-92dee00ed70c",
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "MassOverride": 0,
-          "MotionEnabled": true,
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "2c0c0334-5171-4673-ac08-c88546f48a90",
-          "Flags": 0,
-          "Name": "Object",
-          "Position": "0,0,0",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "90690107-20d7-4641-9b47-98f5a60316ad",
-              "IsTrigger": true,
-              "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
-              "Static": false
-            },
-            {
-              "__type": "TriggerObject",
-              "__guid": "f46269f7-dc89-4fd7-9fa0-26d483bdc796",
-              "triggerType": "PROP"
             }
           ]
         }
@@ -601,25 +1187,10 @@
       ]
     },
     {
-      "__guid": "233020f4-1a3d-4de5-92be-76e752293ffd",
+      "__guid": "81ef0867-ed83-4243-8626-4aa66d62fe0c",
       "Flags": 0,
-      "Name": "Cube",
-      "Position": "317.0561,37.40259,229.3195",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "21536511-4d24-42b3-a7e6-d7faa3205c11",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Testlerp",
-          "__guid": "e3fe2eec-e69e-44d2-a61b-29691257d28d"
-        }
-      ]
+      "Name": "GameObject",
+      "Enabled": true
     }
   ],
   "SceneProperties": {

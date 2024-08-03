@@ -4,12 +4,7 @@ using Sandbox;
 
 public sealed class PropAccerlate : Component
 {
-	public enum PROP_ACCERATION_TYPE{
-		ARIEL, // prop will spawn in flying forward
-		SURFACE, // prop will drop to slope before accelerating
-	}
-	[Property]
-	public PROP_ACCERATION_TYPE propAccelType { get; set; }
+
 
 	Rigidbody rigidbody { get; set; }
 	protected override void OnAwake()
@@ -18,27 +13,17 @@ public sealed class PropAccerlate : Component
 	}
 	protected override void OnStart()
 	{
+		PropRotation();
 	}
 
 	protected override void OnUpdate()
 	{
-		AccelerateProp();
+		
+		SurfaceAccelerate();
 		
 	}
 
-	private void AccelerateProp()
-	{
-		switch(propAccelType)
-		{
-			case PROP_ACCERATION_TYPE.SURFACE:
-				SurfaceAccelerate();
-			break;
 
-			case PROP_ACCERATION_TYPE.ARIEL:
-				ArielAccelerate();
-			break;
-		}
-	}
 
 	private void SurfaceAccelerate()
 	{
@@ -46,6 +31,8 @@ public sealed class PropAccerlate : Component
 		{
 			rigidbody.Velocity = new Vector3(-750f, rigidbody.Velocity.y,rigidbody.Velocity.z);
 		}
+
+
 	}
 	private bool SurfaceGroundCheck()
 	{
@@ -64,15 +51,11 @@ public sealed class PropAccerlate : Component
 			}
 
 	}
-	private void ArielAccelerate()
-	{
 
-	}
-	private void PropRotationLerp()
+	private void PropRotation()
 	{
 		var randRot = new Angles(Game.Random.Float(-360f, 360f),Game.Random.Float(-360f, 360f), Game.Random.Float(-360f, 360f)) ;
-		var targetRot = randRot;
-		GameObject.Transform.Rotation = Angles.Lerp(GameObject.Transform.Rotation, targetRot , 5 * Time.Delta);
+		GameObject.Transform.Rotation = randRot;
 
 	}
 }
