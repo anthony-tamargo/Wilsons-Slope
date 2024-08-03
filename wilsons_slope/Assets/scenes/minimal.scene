@@ -388,7 +388,8 @@
         },
         {
           "__type": "PropAccerlate",
-          "__guid": "df4eb5a2-3d5d-4a72-9b82-9f83ce221622"
+          "__guid": "df4eb5a2-3d5d-4a72-9b82-9f83ce221622",
+          "propAccelType": "SURFACE"
         },
         {
           "__type": "Sandbox.ModelCollider",
@@ -437,9 +438,145 @@
       ]
     },
     {
+      "__guid": "536a771d-05a2-4f38-8472-91424eb171a4",
+      "Flags": 0,
+      "Name": "Prop Test (1)",
+      "Position": "1730.858,-96.78593,797.3035",
+      "Rotation": "0.04864816,0.7123347,0.5539556,-0.4281891",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "6bec65fb-8b9d-4084-8020-1e0709830266",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "6848c63c-79b6-4f59-8a74-7bcdf310c41b",
+          "propAccelType": "SURFACE"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "0d2de0d1-cf98-4afe-a086-30afe57d121e",
+          "IsTrigger": false,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "Static": false,
+          "Surface": "surfaces/slippy_wheels.surface"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "10c56837-103c-4d42-9a89-d748ef695fb0",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "8c22f410-e00b-4716-8e40-36f5f134f70a",
+          "Flags": 0,
+          "Name": "Object",
+          "Position": "0,0,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "1266dbc3-46bc-436a-a125-f6c066145a10",
+              "IsTrigger": true,
+              "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+              "Static": false
+            },
+            {
+              "__type": "TriggerObject",
+              "__guid": "f8cfdfcc-9e9b-4b13-91e6-7a1dbdab7969",
+              "triggerType": "PROP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "0e7953a7-1526-4674-ae33-764142fa9f89",
+      "Flags": 0,
+      "Name": "Prop Test (2)",
+      "Position": "1730.858,25.73827,797.3035",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "7d915ecb-42ae-4012-811d-ec05e11bdd78",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PropAccerlate",
+          "__guid": "29fd6d16-46b8-44dd-8161-0d40a32e49e4",
+          "propAccelType": "SURFACE"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "0b63e0ab-854a-42b0-a589-f9db22b826ad",
+          "IsTrigger": false,
+          "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+          "Static": false,
+          "Surface": "surfaces/slippy_wheels.surface"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "6fefb7cc-2abb-4bf1-a782-92dee00ed70c",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "2c0c0334-5171-4673-ac08-c88546f48a90",
+          "Flags": 0,
+          "Name": "Object",
+          "Position": "0,0,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "90690107-20d7-4641-9b47-98f5a60316ad",
+              "IsTrigger": true,
+              "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+              "Static": false
+            },
+            {
+              "__type": "TriggerObject",
+              "__guid": "f46269f7-dc89-4fd7-9fa0-26d483bdc796",
+              "triggerType": "PROP"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "__guid": "163018a5-f7eb-403f-9f5c-508d1fdec7a1",
       "Flags": 0,
-      "Name": "Plane",
+      "Name": "Slope Plane",
       "Position": "207.0233,-32.64474,-22.38121",
       "Rotation": "0,-0.2385342,0,0.9711341",
       "Scale": "41.79999,4.199996,1",
@@ -460,6 +597,27 @@
           "IsTrigger": false,
           "Scale": "101.0997,99.79961",
           "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "233020f4-1a3d-4de5-92be-76e752293ffd",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "317.0561,37.40259,229.3195",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "21536511-4d24-42b3-a7e6-d7faa3205c11",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Testlerp",
+          "__guid": "e3fe2eec-e69e-44d2-a61b-29691257d28d"
         }
       ]
     }
