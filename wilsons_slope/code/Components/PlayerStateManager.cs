@@ -19,7 +19,7 @@ public sealed class PlayerStateManager : Component
 		ChangePlayerState(PLAYER_STATES.STARTED);
 	}
 	protected override void OnUpdate(){
-		Log.Info(currentState);
+		//Log.Info(currentState);
 	}
 
 	public void ChangePlayerState(PLAYER_STATES state)

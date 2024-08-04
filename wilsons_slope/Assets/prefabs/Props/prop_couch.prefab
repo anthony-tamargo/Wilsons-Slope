@@ -1,0 +1,88 @@
+{
+  "RootObject": {
+    "__guid": "7b4ebe0a-3107-4357-8091-18bbf76d2dec",
+    "Flags": 0,
+    "Name": "prop_couch",
+    "Tags": "solid,prop",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "b870f901-17fc-4a2f-8789-be7a0dd22762",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/props/couch/couch.vmdl",
+        "RenderType": "Off",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "PropAccerlate",
+        "__guid": "63a3d3c6-80e8-478e-8c7a-576e87097142"
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "5d6b255a-dc17-4aea-9526-b87d0871b30d",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "49faeff9-a647-4848-9783-381e20e54715",
+        "Flags": 0,
+        "Name": "Trigger Collider",
+        "Position": "-44.19531,4.62146,0",
+        "Tags": "trigger",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "TriggerObject",
+            "__guid": "3dc361a2-b949-491c-8375-4279ace9e1de",
+            "triggerType": "PROP"
+          },
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "40325cc4-3185-4399-a2ab-3f62f59eea25",
+            "Center": "43.30009,0.09998777,16.60001",
+            "IsTrigger": true,
+            "Scale": "74.89986,42.19991,30.49999",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "545a7910-2eee-4441-8257-4fd7529b3a7c",
+        "Flags": 0,
+        "Name": "Physics Collider",
+        "Position": "-44.2627,7.035739,14.14069",
+        "Rotation": "0,0.7071068,0,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.CapsuleCollider",
+            "__guid": "9a4cdce3-19c0-4f56-ae46-c3d3ea02e1a4",
+            "End": "0,0,77.90006",
+            "IsTrigger": false,
+            "Radius": 22.00003,
+            "Start": "0,0,0",
+            "Static": false
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [
+    "facepunch.couch"
+  ],
+  "__version": 1
+}

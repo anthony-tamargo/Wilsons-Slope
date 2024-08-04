@@ -1,0 +1,95 @@
+{
+  "RootObject": {
+    "__guid": "af54cd7d-67fa-4db8-bc48-6097e84be669",
+    "Flags": 0,
+    "Name": "prop_wheel",
+    "Tags": "solid,prop",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "c0e18adc-0b7f-431e-a6fa-43057dbc5704",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/citizen_props/wheel02.vmdl",
+        "RenderType": "Off",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "PropAccerlate",
+        "__guid": "df4eb5a2-3d5d-4a72-9b82-9f83ce221622"
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "dce3a90c-a5f1-484a-a330-a90df5bb2400",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "a8f05332-8992-4372-b2e6-11f1aeff9af0",
+        "Flags": 0,
+        "Name": "Trigger Collider",
+        "Position": "0.00000002545073,-0.2911224,0",
+        "Tags": "trigger",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "TriggerObject",
+            "__guid": "e9bc5d21-ae6a-43eb-b947-909297259fa4",
+            "triggerType": "PROP"
+          },
+          {
+            "__type": "Sandbox.HullCollider",
+            "__guid": "6016cbf0-af58-490a-bba0-1f84f2df1779",
+            "BoxSize": "50,50,50",
+            "Center": "0,0,0",
+            "Height": 13.999995,
+            "IsTrigger": true,
+            "Radius": 12.999963,
+            "Radius2": 13,
+            "Slices": 9,
+            "Static": false,
+            "Type": "Cone"
+          }
+        ]
+      },
+      {
+        "__guid": "9a54189c-1ac0-4d4f-aa31-d802d9757cf3",
+        "Flags": 0,
+        "Name": "Physics Collider",
+        "Position": "0.1611328,-0.0002288677,0.6663208",
+        "Rotation": "-0.5,0.5,0.5,0.5",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.HullCollider",
+            "__guid": "3d8d7a25-5191-400f-81fe-9eba9e935805",
+            "BoxSize": "50,50,50",
+            "Center": "0,0,0",
+            "Height": 13.999995,
+            "IsTrigger": false,
+            "Radius": 12.999963,
+            "Radius2": 13,
+            "Slices": 9,
+            "Static": false,
+            "Type": "Cone"
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

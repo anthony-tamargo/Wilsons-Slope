@@ -1,0 +1,88 @@
+{
+  "RootObject": {
+    "__guid": "34f5c22f-7976-498b-9089-7d4903de391f",
+    "Flags": 0,
+    "Name": "prop_bathtub",
+    "Tags": "solid,prop",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "58ab58eb-9af6-445c-9d01-eb8a9f9400b7",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+        "RenderType": "Off",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "PropAccerlate",
+        "__guid": "5e6a493e-44d7-42ce-abf0-d2743c4c4e1f"
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "ceea4693-1779-4e9a-ac43-61371ce3dec7",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "06844aa9-e04a-4150-ba6e-ade5ca184687",
+        "Flags": 0,
+        "Name": "Trigger Collider",
+        "Position": "0.00000002545073,-0.2911224,0",
+        "Tags": "trigger",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "TriggerObject",
+            "__guid": "089ad688-9482-49b0-884e-1e4b9def9ea3",
+            "triggerType": "PROP"
+          },
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "5b161a95-d55b-4d46-ad3c-a1701de00ca2",
+            "Center": "43.30009,0.09998777,16.60001",
+            "IsTrigger": true,
+            "Scale": "87.49984,39.89994,30.49999",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "90bce268-e09e-4f32-b173-ded0b8dd9f82",
+        "Flags": 0,
+        "Name": "Physics Collider",
+        "Position": "-0.0002441406,0.00001525881,14.14044",
+        "Rotation": "0,0.7071068,0,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.CapsuleCollider",
+            "__guid": "439528ec-1968-4b19-987e-25940fe0e684",
+            "End": "0,0,77.90006",
+            "IsTrigger": false,
+            "Radius": 22.00003,
+            "Start": "0,0,0",
+            "Static": false
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [
+    "facepunch.bathtub"
+  ],
+  "__version": 1
+}

@@ -7,6 +7,8 @@ public sealed class PropAccerlate : Component
 
 
 	Rigidbody rigidbody { get; set; }
+	private TimeSince timeSinceTouchedGround { get; set; }
+	private float timeCurrent { get; set; }
 	protected override void OnAwake()
 	{
 		rigidbody = Components.Get<Rigidbody>();
@@ -14,12 +16,15 @@ public sealed class PropAccerlate : Component
 	protected override void OnStart()
 	{
 		PropRotation();
+		timeSinceTouchedGround = 0f;
 	}
 
 	protected override void OnUpdate()
 	{
 		
 		SurfaceAccelerate();
+		PropDespawnTimer();
+		Log.Info(timeCurrent);
 		
 	}
 
@@ -27,12 +32,7 @@ public sealed class PropAccerlate : Component
 
 	private void SurfaceAccelerate()
 	{
-		if(SurfaceGroundCheck())
-		{
-			rigidbody.Velocity = new Vector3(-750f, rigidbody.Velocity.y,rigidbody.Velocity.z);
-		}
-
-
+		rigidbody.Velocity = new Vector3(-750f, rigidbody.Velocity.y,rigidbody.Velocity.z);
 	}
 	private bool SurfaceGroundCheck()
 	{
@@ -40,6 +40,7 @@ public sealed class PropAccerlate : Component
 		var groundCheckRay = Scene.Trace
 			.Ray(propPos , propPos + (Vector3.Down * 15f) )
 			.WithTag("solid")
+			.WithoutTags("prop")
 			.Run();
 			if(groundCheckRay.Hit)
 			{
@@ -56,6 +57,22 @@ public sealed class PropAccerlate : Component
 	{
 		var randRot = new Angles(Game.Random.Float(-360f, 360f),Game.Random.Float(-360f, 360f), Game.Random.Float(-360f, 360f)) ;
 		GameObject.Transform.Rotation = randRot;
+	}
 
+	private void PropDespawnTimer()
+	{
+		if (!SurfaceGroundCheck())
+		{
+			timeCurrent = timeSinceTouchedGround.Relative;
+			if(timeCurrent >= 5f)
+			{
+				GameObject.Destroy();
+			}
+			
+		}
+		else
+		{
+			timeCurrent = 0f;
+		}
 	}
 }
