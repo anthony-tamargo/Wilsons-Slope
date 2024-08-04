@@ -15,10 +15,6 @@
         "Tint": "1,1,1,1"
       },
       {
-        "__type": "PropAccerlate",
-        "__guid": "58632c13-9bc2-457f-9ee9-24346223c89c"
-      },
-      {
         "__type": "Sandbox.Rigidbody",
         "__guid": "4f79e610-93bf-494c-bbe5-9ecbeb93cda1",
         "AngularDamping": 0,
@@ -29,6 +25,11 @@
         "MotionEnabled": true,
         "RigidbodyFlags": 0,
         "StartAsleep": false
+      },
+      {
+        "__type": "PropAccelerate",
+        "__guid": "3f8873f5-4692-4dae-9023-71371fe31933",
+        "spawnWeight": 0.15
       }
     ],
     "Children": [

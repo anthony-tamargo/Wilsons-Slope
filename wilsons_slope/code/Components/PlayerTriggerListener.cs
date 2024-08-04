@@ -31,6 +31,7 @@ public sealed class PlayerTriggerListener : Component, Component.ITriggerListene
 			{
 				Log.Info("Player died!");
 				playerHealth.Death();
+				// add a state change here
 			}
 			
 		}

@@ -397,54 +397,51 @@
       ]
     },
     {
-      "__guid": "0990c2ee-0757-4439-8d17-499ba9c71a38",
+      "__guid": "c2a4479a-f6f8-4649-a4ac-14f709e85fad",
       "Flags": 0,
-      "Name": "Prop Bathtub (2)",
-      "Position": "554.0159,110.9442,265.2299",
+      "Name": "prop_bathtub (1)",
+      "Position": "976.5867,97.18366,493.4076",
       "Tags": "prop,solid",
       "Enabled": true,
       "__Prefab": "prefabs/props/prop_bathtub.prefab",
       "__PrefabVariables": {}
     },
     {
-      "__guid": "d6c1cbdb-c9ad-4b62-a8d1-5f5b8d6c2b21",
+      "__guid": "504b57eb-8043-4e92-a7c9-84c2147ea32d",
       "Flags": 0,
-      "Name": "Prop Bathtub (3)",
-      "Position": "554.0159,49.35503,265.2299",
-      "Tags": "prop,solid",
+      "Name": "prop_couch (2)",
+      "Position": "1099.144,-50.44342,545.8165",
+      "Tags": "solid,prop",
       "Enabled": true,
-      "__Prefab": "prefabs/props/prop_bathtub.prefab",
+      "__Prefab": "prefabs/props/prop_couch.prefab",
       "__PrefabVariables": {}
     },
     {
-      "__guid": "576c4c73-f49f-4d2a-99a2-f157aeb2549d",
+      "__guid": "1e230b81-6212-4f26-beb7-d8d74146a42c",
       "Flags": 0,
-      "Name": "Prop Bathtub (4)",
-      "Position": "554.0159,-7.024395,265.2299",
+      "Name": "prop_truck (2)",
+      "Position": "1368.219,66.21392,675.6853",
       "Tags": "prop,solid",
       "Enabled": true,
-      "__Prefab": "prefabs/props/prop_bathtub.prefab",
+      "__Prefab": "prefabs/props/prop_truck.prefab",
       "__PrefabVariables": {}
     },
     {
-      "__guid": "8206c572-2c1a-40ac-87a9-a5bc32d12d39",
+      "__guid": "2697054c-1d60-4c5b-88c6-06b5155f24d6",
       "Flags": 0,
-      "Name": "Prop Bathtub (5)",
-      "Position": "554.0159,-58.09129,265.2299",
+      "Name": "prop_wheel (2)",
+      "Position": "891.386,-182.7459,447.9412",
       "Tags": "prop,solid",
       "Enabled": true,
-      "__Prefab": "prefabs/props/prop_bathtub.prefab",
+      "__Prefab": "prefabs/props/prop_wheel.prefab",
       "__PrefabVariables": {}
     },
     {
-      "__guid": "db1eb297-c274-43d8-8e60-143a7a2bcc74",
+      "__guid": "9b6a6bac-2821-4855-a8db-9f2d3a2dad6b",
       "Flags": 0,
-      "Name": "Prop Bathtub (6)",
-      "Position": "554.0159,-103.1272,265.2299",
-      "Tags": "prop,solid",
-      "Enabled": true,
-      "__Prefab": "prefabs/props/prop_bathtub.prefab",
-      "__PrefabVariables": {}
+      "Name": "Prop Object ",
+      "Position": "-60.24701,-216.9723,49.88831",
+      "Enabled": true
     }
   ],
   "SceneProperties": {
