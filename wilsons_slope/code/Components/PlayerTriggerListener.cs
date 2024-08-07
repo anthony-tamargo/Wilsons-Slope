@@ -26,12 +26,9 @@ public sealed class PlayerTriggerListener : Component, Component.ITriggerListene
 				playerStateManager.ChangePlayerState(PlayerStateManager.PLAYER_STATES.FINISH);
 				Log.Info("Player has entered the " +  PlayerStateManager.PLAYER_STATES.FINISH + " state");
 			}
-
 			if(trigger.triggerType == TriggerObject.TriggerType.PROP)
 			{
-				Log.Info("Player died!");
 				playerHealth.Death();
-				// add a state change here
 			}
 			else
 			{

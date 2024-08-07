@@ -21,8 +21,10 @@
         "Gravity": true,
         "LinearDamping": 0,
         "Locking": {},
+        "MassCenterOverride": "0,0,0",
         "MassOverride": 0,
         "MotionEnabled": true,
+        "OverrideMassCenter": false,
         "RigidbodyFlags": 0,
         "StartAsleep": false
       },
@@ -33,35 +35,11 @@
     ],
     "Children": [
       {
-        "__guid": "06844aa9-e04a-4150-ba6e-ade5ca184687",
-        "Flags": 0,
-        "Name": "Trigger Collider",
-        "Position": "0.00000002545073,-0.2911224,0",
-        "Tags": "trigger",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "TriggerObject",
-            "__guid": "089ad688-9482-49b0-884e-1e4b9def9ea3",
-            "triggerType": "PROP"
-          },
-          {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "5b161a95-d55b-4d46-ad3c-a1701de00ca2",
-            "Center": "43.30009,0.09998777,16.60001",
-            "IsTrigger": true,
-            "Scale": "87.49984,39.89994,30.49999",
-            "Static": false
-          }
-        ]
-      },
-      {
         "__guid": "90bce268-e09e-4f32-b173-ded0b8dd9f82",
         "Flags": 0,
         "Name": "Physics Collider",
         "Position": "-0.0002441406,0.00001525881,14.14044",
         "Rotation": "0,0.7071068,0,0.7071068",
-        "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.CapsuleCollider",
@@ -75,6 +53,36 @@
           {
             "__type": "PropTriggerListener",
             "__guid": "77d68358-3da5-4069-8447-bc9376e694d9"
+          },
+          {
+            "__type": "CollisionObject",
+            "__guid": "3a4a4d38-3292-4c2f-a346-b403a5058a5b",
+            "colType": "PROP"
+          }
+        ]
+      },
+      {
+        "__guid": "2420ce8f-72f7-4e1e-a048-8c48e3ef5765",
+        "Flags": 0,
+        "Name": "Physics Collider (1)",
+        "Position": "-0.0002441406,0.00001525881,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "PropTriggerListener",
+            "__guid": "d2108329-be07-4d17-ae11-ac21d64d8819"
+          },
+          {
+            "__type": "CollisionObject",
+            "__guid": "ea8c34d5-3448-404c-92a3-d74f9a2e815e",
+            "colType": "PROP"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "c8613417-c7f6-4344-a0dd-6743b278629d",
+            "IsTrigger": false,
+            "Model": "models/sbox_props/bathtub_a/bathtub_a.vmdl",
+            "Static": false
           }
         ]
       }

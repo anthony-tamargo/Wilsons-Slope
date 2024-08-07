@@ -2,200 +2,6 @@
   "__guid": "96dfd853-bb6d-4dfa-8357-6b84e2562d2e",
   "GameObjects": [
     {
-      "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
-      "Flags": 0,
-      "Name": "Sun",
-      "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
-      "Tags": "light_directional,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.DirectionalLight",
-          "__guid": "d3659344-a90d-48fa-927a-095f70fe041f",
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.94419,0.97767,1,1",
-          "Shadows": true,
-          "SkyColor": "0.2532,0.32006,0.35349,1"
-        }
-      ]
-    },
-    {
-      "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
-      "Flags": 0,
-      "Name": "2D Skybox",
-      "Tags": "skybox",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.SkyBox2D",
-          "__guid": "de79e9e0-5c37-4c54-ac67-bfcdb1d5483b",
-          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.EnvmapProbe",
-          "__guid": "f3e304db-baab-4c1a-a4ec-8442585c2d62",
-          "Texture": "textures/cubemaps/default2.vtex",
-          "Bounds": {
-            "Mins": "-512,-512,-512",
-            "Maxs": "512,512,512"
-          },
-          "DelayBetweenUpdates": 0.1,
-          "Feathering": 0.02,
-          "FrameInterval": 5,
-          "MaxDistance": 512,
-          "Projection": "Sphere",
-          "RenderDynamically": false,
-          "TintColor": "1,1,1,1",
-          "UpdateStrategy": "OnEnabled",
-          "ZFar": 4096,
-          "ZNear": 16
-        }
-      ]
-    },
-    {
-      "__guid": "8a88b67f-36a6-4573-a8b3-73fa072e7632",
-      "Flags": 0,
-      "Name": "Destory Prop Trigger",
-      "Position": "-1218.225,0,287.7979",
-      "Scale": "5,15,5",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "607f2d38-d00d-4762-bd2e-9bc45a5c0f45",
-          "Center": "0,0,-5",
-          "IsTrigger": true,
-          "Scale": "149.3001,100,182.7",
-          "Static": false
-        },
-        {
-          "__type": "TriggerObject",
-          "__guid": "2da3ef41-f86c-4a94-be18-af66c3fdda6a",
-          "triggerType": "DESTROY"
-        }
-      ]
-    },
-    {
-      "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
-      "Flags": 0,
-      "Name": "Start Plane",
-      "Position": "-1119.874,0,0",
-      "Scale": "5,15,5",
-      "Tags": "solid",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "0b6a18bf-fdb8-4661-970e-ef635bfa9baa",
-          "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/default.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "0.39546,0.51163,0.27128,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "0715cb55-1733-4f5e-8560-c288b8695631",
-          "Center": "0,0,-5",
-          "IsTrigger": false,
-          "Scale": "100,100,10",
-          "Static": false
-        }
-      ]
-    },
-    {
-      "__guid": "b6e9d034-082f-4cc9-86f8-999bdf26fe7d",
-      "Flags": 0,
-      "Name": "Finish Trigger",
-      "Position": "2883.689,-17.3542,1862.012",
-      "Scale": "0.5,25,0.09999993",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "fd09697d-7419-4011-9f9a-c6ab4a566eac",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,0.68333,0,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "b6d289a9-91b0-4f2e-b69e-8999f7606728",
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false
-        },
-        {
-          "__type": "TriggerObject",
-          "__guid": "9db07659-73e8-4e14-aefc-f3b141155a90",
-          "triggerType": "FINISH"
-        }
-      ]
-    },
-    {
-      "__guid": "1b699f98-32fd-4cf6-aa7a-3c33965abfbf",
-      "Flags": 0,
-      "Name": "Finish Plane ",
-      "Position": "2919.925,0,1859.552",
-      "Scale": "5,15,5",
-      "Tags": "solid",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "a6375514-6bb5-4a74-97db-47937001122f",
-          "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/default.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "0.39546,0.51163,0.27128,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "c4146b0a-6ad7-4952-8e48-3c8cb48d8224",
-          "Center": "0,0,-5",
-          "IsTrigger": false,
-          "Scale": "100,100,10",
-          "Static": false
-        }
-      ]
-    },
-    {
-      "__guid": "0270a420-5c60-4d10-939e-fadc371cc23e",
-      "Flags": 0,
-      "Name": "Start Trigger",
-      "Position": "-1295.213,-16.33946,1.980635",
-      "Scale": "0.5,25,0.09999993",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "08fe0c9b-3223-4064-9974-0596fe692d32",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "0,1,0.05,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "cda525fe-fd8d-4cec-a08d-2937888de6b6",
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false
-        },
-        {
-          "__type": "TriggerObject",
-          "__guid": "20fad2a9-60d0-48fb-96d7-040471483236",
-          "triggerType": "START"
-        }
-      ]
-    },
-    {
       "__guid": "faeb51b7-b410-4603-a2ab-bfba3135080c",
       "Flags": 0,
       "Name": "Player",
@@ -278,6 +84,16 @@
           }
         },
         {
+          "__type": "PlayerCollisionListener",
+          "__guid": "d12676bf-8dd4-4db8-aff8-2b1dc69403a0",
+          "playerHealth": {
+            "_type": "component",
+            "component_id": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
+            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
+            "component_type": "PlayerHealth"
+          }
+        },
+        {
           "__type": "PlayerHealth",
           "__guid": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
           "currentHealth": 0,
@@ -304,6 +120,27 @@
         {
           "__type": "PlayerTimer",
           "__guid": "45d91dba-6305-44a3-b9f0-c40c5c1d6bcd"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "08de3236-2db2-490f-997f-9408f7b7d021",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ],
       "Children": [
@@ -384,7 +221,7 @@
     {
       "__guid": "d21b6b22-3100-4203-9ba6-ced3fecee729",
       "Flags": 0,
-      "Name": "Screen",
+      "Name": "Screen Canvas",
       "Position": "-1224.409,-126.0521,57.26855",
       "Enabled": true,
       "Components": [
@@ -451,6 +288,7 @@
       "__guid": "64caaa1e-3774-4ac0-8ea0-4b99ca467b55",
       "Flags": 0,
       "Name": "Prop Spawners",
+      "Position": "1930.088,0,1210.63",
       "Enabled": true,
       "Children": [
         {
@@ -489,8 +327,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -81993920,
-                "Passed": 81993917.0676499,
+                "Relative": -82074904,
+                "Passed": 82074906.8733648,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -501,6 +339,1326 @@
               "BodyGroups": 18446744073709551615,
               "RenderType": "On",
               "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "32b278fa-1007-4c59-94fd-2d59791171fe",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4946,-107.0883,970.8105",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "5441e7be-787a-4637-bf6f-0223b973f379",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8733823,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "b06c7e5e-0884-4c1d-b162-0f5526d1545c",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "945ea778-320b-4212-976a-0d31e0410958",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4946,-107.0883,970.8105",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "6c668e39-7793-40f7-aed4-edb7f1a62458",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8733973,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "4f4ab50a-11f7-4941-94f1-1d633b44a63b",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "2047538f-b864-4795-a426-3593ee81fd70",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "179.5037,-9.3713,787.6823",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "579a574e-a5f7-4288-8396-7cc059866aca",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8734115,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "a36f21c0-0ab3-4784-b0b8-e6cd59a775e2",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "82432d77-cbef-4f91-8919-19972195e340",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4946,-9.3713,970.8105",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "45822c37-a119-4238-8f18-ad323160c57e",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8734257,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "8ea04d42-10a2-4638-bfd8-92b7a0364e15",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "c3c6a326-08e6-46c9-938a-4579afdf6a7c",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "179.5037,89.23722,787.6823",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "59b71a0e-3594-49c6-b5b6-95629cfe4857",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8734395,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "b841efad-e2ec-4454-8081-3ebd4f92fb5b",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "49ae4de5-c6b5-4352-8afd-ac684c4d87a3",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4946,89.23722,970.8105",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "d7a7146a-8828-4f5b-a0d8-89fa36aae90b",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8734529,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "106abca1-fc0a-4564-baa1-13fba08bd578",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "696b31e7-4bcc-49ed-a684-b98c09671b44",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4945,89.23722,970.8104",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "4249f4f9-8fe9-43a2-ab66-b1c0cbba2d3e",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.873467,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "22b9e0a8-821d-42d4-a9f9-1864e96d29fa",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "d8c5d9b8-6b97-40f2-8738-64ae9aaa72d4",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "179.5037,189.861,787.6823",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "5b20f6ee-f642-4389-82e1-a0004c520732",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.873481,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "d9cf16ea-0500-41e1-88a1-13034059d92f",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "78608040-cc26-43d0-a097-acc501a63ced",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4946,189.861,970.8105",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "565f0b28-b53e-4d20-a96b-a1d0efa36e2c",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8734951,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "efe3e55c-d2a3-40d5-b827-445dac949b5d",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "ccef3c27-d99f-4d8f-9880-247fdecbff28",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "179.5037,302.943,787.6823",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "0d4a66fc-40a3-48d8-91d4-a709acca049c",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8735088,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "671178da-2e22-42c6-bb99-ab5b7506a21f",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "081d889d-9e77-458a-b746-b27335f69d12",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4946,302.943,970.8105",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "e325f4d5-2f2b-4797-848f-b28b3a9b1deb",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8735226,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "549f73bc-9948-49a7-89fa-b5bafd3a15c2",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "927ca821-0815-489f-b31a-9a4a2841a3cf",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "179.5037,414.4948,787.6823",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "d343af43-3294-468f-976b-b2d0b180c277",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8735361,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "996b0f10-e59c-4226-8447-83b9c118f42d",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "fe7de6d2-a09c-48f1-aee1-9059d5a73582",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "179.5038,501.6292,787.6823",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "9946b480-0c99-4854-840c-fc996be85502",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8735498,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "eca8d018-9d10-42f7-a0ab-ec27818a6e2c",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "0a8574c8-0b47-455b-80be-c11a926934de",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4946,414.4948,970.8105",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "789e7d4a-9d10-486a-9ded-ed958b7fc878",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8735637,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "44576428-37d4-4c78-8370-0efe912d1a7e",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "5bccc103-4b31-450c-97c8-5749d5e135fd",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4945,512.0389,970.8104",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "69295730-747b-481a-9226-d45208e1f0a9",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8735774,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "9fbdd29d-ceb4-4eee-88b4-dbe5fa77de30",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "2cafdaac-df87-488c-88c3-c830138f7e0a",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "179.5037,-223.2687,787.6823",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "dd864109-144e-4283-90be-c3f9b75f7fc2",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.873591,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "1189efed-85c5-4418-bd41-86269ccb9f44",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "182d1da1-8a89-4364-bf1f-370ca03e7fe4",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4946,-223.2687,970.8105",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "a20fca62-aea4-4af8-868b-3f3453950910",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8736048,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "73db4efd-c7af-4280-b511-74c102338e10",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "b68793d4-6a4a-4ebb-acb9-dffd351f7b73",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "179.5037,-342.7132,787.6823",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "d7a2085f-85ab-4432-aec7-c82b7e9cd11c",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.873618,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "06cab25d-461d-4f7b-a8e0-9463b0b04a6e",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "1236511f-e7fa-4036-9261-03e4c47ca77d",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "179.5038,-442.0355,787.6823",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "9c8bd834-6db5-49aa-915d-f3a7899b03b2",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8736336,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "e898a2e1-5e6b-4bc4-878e-02033b546904",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "3c98cb49-dc94-429f-93a6-c031f6b50ed3",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4946,-342.7132,970.8105",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "b7cbcc71-f30e-4df7-8caf-92ef84e981f4",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8736473,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "e1607881-a14a-4aab-9e51-73250f06e91c",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "1e3df4e1-1b88-4f05-b8f4-0fbdcfe2600c",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "572.4945,-447.9853,970.8104",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "82015bee-f232-4502-9b50-120049e5c530",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -82074904,
+                "Passed": 82074906.8736613,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "25d3cbe2-8628-468d-ab04-da9baffc9491",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "17eead1c-bd2e-4100-881d-5cccabd0175e",
+      "Flags": 0,
+      "Name": "Prop Destory Triggers",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "162e06ec-c554-4d31-8eac-09c32b5550e0",
+          "Flags": 0,
+          "Name": "Destory Prop Trigger (1)",
+          "Position": "235.9027,0,-346.3067",
+          "Scale": "5,15,5",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "6f0db44f-8e55-4ad5-8041-984ff70b8042",
+              "Center": "0,0,-5",
+              "IsTrigger": true,
+              "Scale": "605.3997,289.7997,116.7001",
+              "Static": false
+            },
+            {
+              "__type": "TriggerObject",
+              "__guid": "09bcf3a9-f545-4336-8a78-c692ca6d4311",
+              "triggerType": "DESTROY"
+            }
+          ]
+        },
+        {
+          "__guid": "8a88b67f-36a6-4573-a8b3-73fa072e7632",
+          "Flags": 0,
+          "Name": "Destory Prop Trigger",
+          "Position": "-988.3543,0,287.7979",
+          "Scale": "5,15,5",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "607f2d38-d00d-4762-bd2e-9bc45a5c0f45",
+              "Center": "0,0,-5",
+              "IsTrigger": true,
+              "Scale": "36.0001,100,116.7001",
+              "Static": false
+            },
+            {
+              "__type": "TriggerObject",
+              "__guid": "2da3ef41-f86c-4a94-be18-af66c3fdda6a",
+              "triggerType": "DESTROY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "356291de-8eed-4b39-b81f-ffcfbae607e4",
+      "Flags": 0,
+      "Name": "Finish Area",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "1b699f98-32fd-4cf6-aa7a-3c33965abfbf",
+          "Flags": 0,
+          "Name": "Finish Plane ",
+          "Position": "2919.925,0,1859.552",
+          "Scale": "5,15,5",
+          "Tags": "solid",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "a6375514-6bb5-4a74-97db-47937001122f",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/default.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "0.39546,0.51163,0.27128,1"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "c4146b0a-6ad7-4952-8e48-3c8cb48d8224",
+              "Center": "0,0,-5",
+              "IsTrigger": false,
+              "Scale": "100,100,10",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "b6e9d034-082f-4cc9-86f8-999bdf26fe7d",
+          "Flags": 0,
+          "Name": "Finish Trigger",
+          "Position": "2883.689,-17.3542,1862.012",
+          "Scale": "0.5,25,0.09999993",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "fd09697d-7419-4011-9f9a-c6ab4a566eac",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0.68333,0,1"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "b6d289a9-91b0-4f2e-b69e-8999f7606728",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false
+            },
+            {
+              "__type": "TriggerObject",
+              "__guid": "9db07659-73e8-4e14-aefc-f3b141155a90",
+              "triggerType": "FINISH"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "2d40c716-fd2b-4d9e-8dd4-c12f2a51e0b4",
+      "Flags": 0,
+      "Name": "Start Area",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "0270a420-5c60-4d10-939e-fadc371cc23e",
+          "Flags": 0,
+          "Name": "Start Trigger",
+          "Position": "-1295.213,-16.33946,1.980635",
+          "Scale": "0.5,25,0.09999993",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "08fe0c9b-3223-4064-9974-0596fe692d32",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "0,1,0.05,1"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "cda525fe-fd8d-4cec-a08d-2937888de6b6",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false
+            },
+            {
+              "__type": "TriggerObject",
+              "__guid": "20fad2a9-60d0-48fb-96d7-040471483236",
+              "triggerType": "START"
+            }
+          ]
+        },
+        {
+          "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
+          "Flags": 0,
+          "Name": "Start Plane",
+          "Position": "-1119.874,0,0",
+          "Scale": "5,15,5",
+          "Tags": "solid",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "0b6a18bf-fdb8-4661-970e-ef635bfa9baa",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/default.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "0.39546,0.51163,0.27128,1"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "0715cb55-1733-4f5e-8560-c288b8695631",
+              "Center": "0,0,-5",
+              "IsTrigger": false,
+              "Scale": "100,100,10",
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "8d668130-bc0b-4031-b141-e6c33ab0d2a7",
+      "Flags": 0,
+      "Name": "World Stuff",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+          "Flags": 0,
+          "Name": "2D Skybox",
+          "Tags": "skybox",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "de79e9e0-5c37-4c54-ac67-bfcdb1d5483b",
+              "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "f3e304db-baab-4c1a-a4ec-8442585c2d62",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-512,-512,-512",
+                "Maxs": "512,512,512"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "Projection": "Sphere",
+              "RenderDynamically": false,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
+          "Flags": 0,
+          "Name": "Sun",
+          "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "d3659344-a90d-48fa-927a-095f70fe041f",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.94419,0.97767,1,1",
+              "Shadows": true,
+              "SkyColor": "0.2532,0.32006,0.35349,1"
             }
           ]
         }

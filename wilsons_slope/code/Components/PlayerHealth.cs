@@ -33,14 +33,23 @@ public sealed class PlayerHealth : Component
 	}
 	public void Death()
 	{
-		var dp = prefabDeathPoint.Clone();
-		var dpG = prefabDeathGibs.Clone();
+		if(currentHealth == 0f)
+		{
+			return;
+			// this check is here in case the collisionlistener triggers this method more than once
+		}
+		else
+		{
+			var dp = prefabDeathPoint.Clone();
+			var dpG = prefabDeathGibs.Clone();
 
-		dp.Transform.Position = currentPlayerPos;
-		dpG.Transform.Position = currentPlayerPos;
-		currentHealth = 0f;
-		GameObject.Destroy();
+			dp.Transform.Position = currentPlayerPos;
+			dpG.Transform.Position = currentPlayerPos;
+			currentHealth = 0f;
+			GameObject.Destroy();
 	}
+		}
+
 
 
 

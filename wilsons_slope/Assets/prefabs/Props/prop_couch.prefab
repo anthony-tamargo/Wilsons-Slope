@@ -3,7 +3,7 @@
     "__guid": "7b4ebe0a-3107-4357-8091-18bbf76d2dec",
     "Flags": 0,
     "Name": "prop_couch",
-    "Tags": "solid,prop",
+    "Tags": "prop,solid",
     "Enabled": true,
     "Components": [
       {
@@ -21,8 +21,10 @@
         "Gravity": true,
         "LinearDamping": 0,
         "Locking": {},
+        "MassCenterOverride": "0,0,0",
         "MassOverride": 0,
         "MotionEnabled": true,
+        "OverrideMassCenter": false,
         "RigidbodyFlags": 0,
         "StartAsleep": false
       },
@@ -33,35 +35,11 @@
     ],
     "Children": [
       {
-        "__guid": "49faeff9-a647-4848-9783-381e20e54715",
-        "Flags": 0,
-        "Name": "Trigger Collider",
-        "Position": "-44.19531,4.62146,0",
-        "Tags": "trigger",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "TriggerObject",
-            "__guid": "3dc361a2-b949-491c-8375-4279ace9e1de",
-            "triggerType": "PROP"
-          },
-          {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "40325cc4-3185-4399-a2ab-3f62f59eea25",
-            "Center": "43.30009,0.09998777,16.60001",
-            "IsTrigger": true,
-            "Scale": "74.89986,42.19991,30.49999",
-            "Static": false
-          }
-        ]
-      },
-      {
         "__guid": "545a7910-2eee-4441-8257-4fd7529b3a7c",
         "Flags": 0,
         "Name": "Physics Collider",
         "Position": "-44.2627,5.672292,14.1407",
         "Rotation": "0,0.7071068,0,0.7071068",
-        "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.CapsuleCollider",
@@ -75,6 +53,36 @@
           {
             "__type": "PropTriggerListener",
             "__guid": "ea7187c6-410e-4d64-b1c8-9656995b2f50"
+          },
+          {
+            "__type": "CollisionObject",
+            "__guid": "d8ea870c-e827-4ff6-b938-06995e5a9fb6",
+            "colType": "PROP"
+          }
+        ]
+      },
+      {
+        "__guid": "671cad0b-c449-42f0-9415-bcdc998630a1",
+        "Flags": 0,
+        "Name": "Physics Collider (1)",
+        "Rotation": "0,0.7071068,0,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "PropTriggerListener",
+            "__guid": "d8e43113-e9e5-4cdb-889d-3130405d135c"
+          },
+          {
+            "__type": "CollisionObject",
+            "__guid": "8d34b423-1886-4e8a-977b-9af0366490c1",
+            "colType": "PROP"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "0a99f826-6b93-4620-bf1b-06efd37ec16f",
+            "IsTrigger": false,
+            "Model": "models/props/couch/couch.vmdl",
+            "Static": false
           }
         ]
       }

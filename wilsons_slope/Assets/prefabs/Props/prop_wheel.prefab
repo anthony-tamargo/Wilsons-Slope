@@ -21,8 +21,10 @@
         "Gravity": true,
         "LinearDamping": 0,
         "Locking": {},
+        "MassCenterOverride": "0,0,0",
         "MassOverride": 0,
         "MotionEnabled": true,
+        "OverrideMassCenter": false,
         "RigidbodyFlags": 0,
         "StartAsleep": false
       },
@@ -33,41 +35,11 @@
     ],
     "Children": [
       {
-        "__guid": "a8f05332-8992-4372-b2e6-11f1aeff9af0",
-        "Flags": 0,
-        "Name": "Trigger Collider",
-        "Position": "0.00000002545073,-0.2911224,0",
-        "Rotation": "-0.5,0.5,0.5,0.5",
-        "Tags": "trigger",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "TriggerObject",
-            "__guid": "e9bc5d21-ae6a-43eb-b947-909297259fa4",
-            "triggerType": "PROP"
-          },
-          {
-            "__type": "Sandbox.HullCollider",
-            "__guid": "f7d6779b-9705-487e-85e1-0e1b7426e129",
-            "BoxSize": "50,50,50",
-            "Center": "0,0,0",
-            "Height": 15,
-            "IsTrigger": true,
-            "Radius": 15,
-            "Radius2": 15,
-            "Slices": 9,
-            "Static": false,
-            "Type": "Cone"
-          }
-        ]
-      },
-      {
         "__guid": "9a54189c-1ac0-4d4f-aa31-d802d9757cf3",
         "Flags": 0,
         "Name": "Physics Collider",
         "Position": "0.1611328,-0.0002288677,0.6663208",
         "Rotation": "-0.5,0.5,0.5,0.5",
-        "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.HullCollider",
@@ -85,6 +57,50 @@
           {
             "__type": "PropTriggerListener",
             "__guid": "77617c83-c8be-4852-a694-e2c1d7827eb4"
+          },
+          {
+            "__type": "CollisionObject",
+            "__guid": "d6f82047-6952-46df-b95f-b88e2a586254",
+            "colType": "PROP"
+          }
+        ]
+      },
+      {
+        "__guid": "54b49da6-9870-4e72-8a20-4bc5d20ec3cc",
+        "Flags": 0,
+        "Name": "Physics Collider (1)",
+        "Position": "0,-0.0002288677,0",
+        "Rotation": "-0.5,0.5,0.5,0.5",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.HullCollider",
+            "__guid": "e5d0c3ac-55b8-44fc-af24-af3455bfc802",
+            "BoxSize": "50,50,50",
+            "Center": "0,0,0",
+            "Height": 15,
+            "IsTrigger": false,
+            "Radius": 15,
+            "Radius2": 15,
+            "Slices": 9,
+            "Static": false,
+            "Type": "Cone"
+          },
+          {
+            "__type": "PropTriggerListener",
+            "__guid": "23c3d3bc-79ae-4288-a2a6-bd318bdf8581"
+          },
+          {
+            "__type": "CollisionObject",
+            "__guid": "b87265be-d80c-4303-9bed-fa18839ecf5b",
+            "colType": "PROP"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "b98be92c-7d67-4039-85be-560c90313b37",
+            "IsTrigger": false,
+            "Model": "models/citizen_props/wheel02.vmdl",
+            "Static": false
           }
         ]
       }

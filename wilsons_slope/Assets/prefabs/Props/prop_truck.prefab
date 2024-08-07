@@ -21,8 +21,10 @@
         "Gravity": true,
         "LinearDamping": 0,
         "Locking": {},
+        "MassCenterOverride": "0,0,0",
         "MassOverride": 0,
         "MotionEnabled": true,
+        "OverrideMassCenter": false,
         "RigidbodyFlags": 0,
         "StartAsleep": false
       },
@@ -33,57 +35,10 @@
     ],
     "Children": [
       {
-        "__guid": "03436ccf-931d-4141-b1fb-2b23e7863b82",
-        "Flags": 0,
-        "Name": "Trigger Collider 1",
-        "Position": "-57.8385,-0.4804738,8.864258",
-        "Tags": "trigger",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "TriggerObject",
-            "__guid": "a801e441-a44d-44e7-8a73-e17213de25f6",
-            "triggerType": "PROP"
-          },
-          {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "d020bf2a-723d-4b9c-a044-c4505dabfbab",
-            "Center": "43.30009,0.09998777,16.60001",
-            "IsTrigger": true,
-            "Scale": "162.3001,124.2999,44.89993",
-            "Static": false
-          }
-        ]
-      },
-      {
-        "__guid": "9816dc96-aac7-4431-a8f6-cb6bd6f2eedd",
-        "Flags": 0,
-        "Name": "Trigger Collider 2",
-        "Position": "45.96912,-0.4804724,62.7923",
-        "Tags": "trigger",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "TriggerObject",
-            "__guid": "d49661d3-b7bc-42fa-9ec9-341e454ce67b",
-            "triggerType": "PROP"
-          },
-          {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "a5bbd943-ba9b-4862-a87e-7f1766c22f0c",
-            "Center": "43.30009,0.09998777,16.60001",
-            "IsTrigger": true,
-            "Scale": "105.8,124.2999,141.4997",
-            "Static": false
-          }
-        ]
-      },
-      {
         "__guid": "7fdd5060-9499-40a4-ab66-b8139649ef8d",
         "Flags": 0,
         "Name": "Physics Collider",
         "Position": "-60.75549,-0.3842826,6.440674",
-        "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.BoxCollider",
@@ -96,6 +51,35 @@
           {
             "__type": "PropTriggerListener",
             "__guid": "d818abb3-b7eb-4c73-bc11-f9a4ab333ba5"
+          },
+          {
+            "__type": "CollisionObject",
+            "__guid": "dda6399a-5c2a-4f1f-b6c8-f0b58d393a7a",
+            "colType": "PROP"
+          }
+        ]
+      },
+      {
+        "__guid": "4f0b77af-2227-4eba-ba62-0a1c3375dc91",
+        "Flags": 0,
+        "Name": "Physics Collider (1)",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "PropTriggerListener",
+            "__guid": "3e301082-9b4b-48e4-a71b-eece2234edfc"
+          },
+          {
+            "__type": "CollisionObject",
+            "__guid": "394ab522-3921-4f4f-a7b5-02279df9ce65",
+            "colType": "PROP"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "3de9e206-57fb-4867-a484-b258a747b40a",
+            "IsTrigger": false,
+            "Model": "models/dev/vehicle/truck_dev.vmdl",
+            "Static": false
           }
         ]
       },
@@ -104,7 +88,6 @@
         "Flags": 0,
         "Name": "Physics Collider 2",
         "Position": "49.28894,-0.3842807,59.09869",
-        "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.BoxCollider",
@@ -117,6 +100,11 @@
           {
             "__type": "PropTriggerListener",
             "__guid": "8affe6d6-30ba-44d6-8d90-99a07a8e9f2d"
+          },
+          {
+            "__type": "CollisionObject",
+            "__guid": "3f92b280-f758-4551-a10c-9ccee344f073",
+            "colType": "PROP"
           }
         ]
       }
