@@ -6,7 +6,8 @@ public sealed class TriggerObject : Component
 	public enum TriggerType {
 		START,
 		FINISH,
-		PROP
+		PROP,
+		DESTROY
 	}
 	[Property] public TriggerType triggerType { get; private set; }
 

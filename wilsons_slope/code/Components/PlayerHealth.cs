@@ -20,7 +20,7 @@ public sealed class PlayerHealth : Component
 		}
 		else
 		{
-			currentPlayerPos = currentPlayerPos;
+			return;
 		}
 	}
 	public void Damage(float damage)

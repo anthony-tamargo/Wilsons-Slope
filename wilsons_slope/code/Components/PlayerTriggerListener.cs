@@ -33,6 +33,10 @@ public sealed class PlayerTriggerListener : Component, Component.ITriggerListene
 				playerHealth.Death();
 				// add a state change here
 			}
+			else
+			{
+				return; 
+			}
 			
 		}
 		

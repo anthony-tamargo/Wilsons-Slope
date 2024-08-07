@@ -28,8 +28,7 @@
       },
       {
         "__type": "PropAccelerate",
-        "__guid": "30747c76-c10a-4aae-b939-15dbc9131f7b",
-        "spawnWeight": 0.5
+        "__guid": "30747c76-c10a-4aae-b939-15dbc9131f7b"
       }
     ],
     "Children": [
@@ -60,7 +59,7 @@
         "__guid": "545a7910-2eee-4441-8257-4fd7529b3a7c",
         "Flags": 0,
         "Name": "Physics Collider",
-        "Position": "-44.2627,7.035739,14.14069",
+        "Position": "-44.2627,5.672292,14.1407",
         "Rotation": "0,0.7071068,0,0.7071068",
         "Enabled": true,
         "Components": [
@@ -72,6 +71,10 @@
             "Radius": 22.00003,
             "Start": "0,0,0",
             "Static": false
+          },
+          {
+            "__type": "PropTriggerListener",
+            "__guid": "ea7187c6-410e-4d64-b1c8-9656995b2f50"
           }
         ]
       }

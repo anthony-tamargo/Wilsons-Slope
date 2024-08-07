@@ -28,8 +28,7 @@
       },
       {
         "__type": "PropAccelerate",
-        "__guid": "21cbc47b-b851-41e8-a17b-317ac5a6620e",
-        "spawnWeight": 0.25
+        "__guid": "21cbc47b-b851-41e8-a17b-317ac5a6620e"
       }
     ],
     "Children": [
@@ -38,6 +37,7 @@
         "Flags": 0,
         "Name": "Trigger Collider",
         "Position": "0.00000002545073,-0.2911224,0",
+        "Rotation": "-0.5,0.5,0.5,0.5",
         "Tags": "trigger",
         "Enabled": true,
         "Components": [
@@ -48,13 +48,13 @@
           },
           {
             "__type": "Sandbox.HullCollider",
-            "__guid": "6016cbf0-af58-490a-bba0-1f84f2df1779",
+            "__guid": "f7d6779b-9705-487e-85e1-0e1b7426e129",
             "BoxSize": "50,50,50",
             "Center": "0,0,0",
-            "Height": 13.999995,
+            "Height": 15,
             "IsTrigger": true,
-            "Radius": 12.999963,
-            "Radius2": 13,
+            "Radius": 15,
+            "Radius2": 15,
             "Slices": 9,
             "Static": false,
             "Type": "Cone"
@@ -74,13 +74,17 @@
             "__guid": "3d8d7a25-5191-400f-81fe-9eba9e935805",
             "BoxSize": "50,50,50",
             "Center": "0,0,0",
-            "Height": 13.999995,
+            "Height": 15,
             "IsTrigger": false,
-            "Radius": 12.999963,
-            "Radius2": 13,
+            "Radius": 15,
+            "Radius2": 15,
             "Slices": 9,
             "Static": false,
             "Type": "Cone"
+          },
+          {
+            "__type": "PropTriggerListener",
+            "__guid": "77617c83-c8be-4852-a694-e2c1d7827eb4"
           }
         ]
       }

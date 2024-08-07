@@ -28,8 +28,7 @@
       },
       {
         "__type": "PropAccelerate",
-        "__guid": "3f8873f5-4692-4dae-9023-71371fe31933",
-        "spawnWeight": 0.15
+        "__guid": "3f8873f5-4692-4dae-9023-71371fe31933"
       }
     ],
     "Children": [
@@ -93,6 +92,10 @@
             "IsTrigger": false,
             "Scale": "146.0001,126.2999,42.99993",
             "Static": false
+          },
+          {
+            "__type": "PropTriggerListener",
+            "__guid": "d818abb3-b7eb-4c73-bc11-f9a4ab333ba5"
           }
         ]
       },
@@ -110,6 +113,10 @@
             "IsTrigger": false,
             "Scale": "105.8,124.2999,141.4997",
             "Static": false
+          },
+          {
+            "__type": "PropTriggerListener",
+            "__guid": "8affe6d6-30ba-44d6-8d90-99a07a8e9f2d"
           }
         ]
       }

@@ -28,8 +28,7 @@
       },
       {
         "__type": "PropAccelerate",
-        "__guid": "176ffe2f-4022-49d8-b94a-f0003e2bd6e6",
-        "spawnWeight": 0.5
+        "__guid": "0a893ca5-c385-44ac-a6ad-f5143f1e4ab0"
       }
     ],
     "Children": [
@@ -72,6 +71,10 @@
             "Radius": 22.00003,
             "Start": "0,0,0",
             "Static": false
+          },
+          {
+            "__type": "PropTriggerListener",
+            "__guid": "77d68358-3da5-4069-8447-bc9376e694d9"
           }
         ]
       }

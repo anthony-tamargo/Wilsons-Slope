@@ -34,6 +34,7 @@ public sealed class PlayerTimer : Component
 	public void RestartTimer()
 	{
 		playerCurrentTime = 0f; 
+		
 	}
 	public void StartTimer()
 	{

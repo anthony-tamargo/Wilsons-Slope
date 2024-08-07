@@ -1,5 +1,4 @@
-using System;
-using System.Net.Http.Headers;
+
 using Sandbox;
 
 public sealed class PropAccelerate : Component
@@ -7,11 +6,10 @@ public sealed class PropAccelerate : Component
 
 
 	Rigidbody rigidbody { get; set; }
-	private TimeSince timeSinceTouchedGround;
-	private float timeCurrent = 0f;
-	[Property]
-	[Description("Spawn weight, used to calculate how often this prop should appear")]
-	public float spawnWeight {get; private set;}
+	private RealTimeSince timeSinceTouchedGround;
+	private float timeCurrent;
+	
+
 	protected override void OnAwake()
 	{
 		rigidbody = Components.Get<Rigidbody>();
@@ -19,19 +17,24 @@ public sealed class PropAccelerate : Component
 	protected override void OnStart()
 	{
 		PropRotation();
+
 		timeSinceTouchedGround = 0f; //initialize timer
+		timeCurrent = 0f;
+
 	}
 
 	protected override void OnUpdate()
 	{
 		
 		PropDespawnTimer();
-		Log.Info("[" + GameObject.Name + "]" + timeCurrent);
+		
+		//Log.Info("[" + GameObject.Name + "]" + timeCurrent);
 		
 	}
 	protected override void OnFixedUpdate()
 	{
-		SurfaceAccelerate();
+		SurfaceAccelerate();	
+		
 	}
 
 
@@ -72,13 +75,17 @@ public sealed class PropAccelerate : Component
 			timeCurrent = timeSinceTouchedGround.Relative;
 			if(timeCurrent >= 5f)
 			{
+				timeCurrent = 5f;
 				GameObject.Destroy();
 			}	
 		}
 		else
 		{
+			timeCurrent = 0f;
 			timeSinceTouchedGround = 0f;
 			
 		}
 	}
+
+
 }

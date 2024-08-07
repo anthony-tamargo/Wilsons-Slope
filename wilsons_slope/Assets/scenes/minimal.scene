@@ -55,11 +55,34 @@
       ]
     },
     {
+      "__guid": "8a88b67f-36a6-4573-a8b3-73fa072e7632",
+      "Flags": 0,
+      "Name": "Destory Prop Trigger",
+      "Position": "-1218.225,0,287.7979",
+      "Scale": "5,15,5",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "607f2d38-d00d-4762-bd2e-9bc45a5c0f45",
+          "Center": "0,0,-5",
+          "IsTrigger": true,
+          "Scale": "149.3001,100,182.7",
+          "Static": false
+        },
+        {
+          "__type": "TriggerObject",
+          "__guid": "2da3ef41-f86c-4a94-be18-af66c3fdda6a",
+          "triggerType": "DESTROY"
+        }
+      ]
+    },
+    {
       "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
       "Flags": 0,
-      "Name": "Plane",
-      "Position": "3.046941,0,0",
-      "Scale": "5,5,5",
+      "Name": "Start Plane",
+      "Position": "-1119.874,0,0",
+      "Scale": "5,15,5",
       "Tags": "solid",
       "Enabled": true,
       "Components": [
@@ -83,11 +106,70 @@
       ]
     },
     {
+      "__guid": "b6e9d034-082f-4cc9-86f8-999bdf26fe7d",
+      "Flags": 0,
+      "Name": "Finish Trigger",
+      "Position": "2883.689,-17.3542,1862.012",
+      "Scale": "0.5,25,0.09999993",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "fd09697d-7419-4011-9f9a-c6ab4a566eac",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,0.68333,0,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "b6d289a9-91b0-4f2e-b69e-8999f7606728",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
+        },
+        {
+          "__type": "TriggerObject",
+          "__guid": "9db07659-73e8-4e14-aefc-f3b141155a90",
+          "triggerType": "FINISH"
+        }
+      ]
+    },
+    {
+      "__guid": "1b699f98-32fd-4cf6-aa7a-3c33965abfbf",
+      "Flags": 0,
+      "Name": "Finish Plane ",
+      "Position": "2919.925,0,1859.552",
+      "Scale": "5,15,5",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "a6375514-6bb5-4a74-97db-47937001122f",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/default.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "0.39546,0.51163,0.27128,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "c4146b0a-6ad7-4952-8e48-3c8cb48d8224",
+          "Center": "0,0,-5",
+          "IsTrigger": false,
+          "Scale": "100,100,10",
+          "Static": false
+        }
+      ]
+    },
+    {
       "__guid": "0270a420-5c60-4d10-939e-fadc371cc23e",
       "Flags": 0,
-      "Name": "Start ",
-      "Position": "19.5247,-16.33946,1.980635",
-      "Scale": "-0.09999993,-7.699996,0.09999993",
+      "Name": "Start Trigger",
+      "Position": "-1295.213,-16.33946,1.980635",
+      "Scale": "0.5,25,0.09999993",
       "Enabled": true,
       "Components": [
         {
@@ -114,41 +196,10 @@
       ]
     },
     {
-      "__guid": "53fc6b5d-0b9b-4913-95f5-3d2d0b3ade52",
-      "Flags": 0,
-      "Name": "Finish",
-      "Position": "536.2266,-17.3542,149.0505",
-      "Scale": "-0.09999993,-7.699996,0.09999993",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "cb8730c5-af14-4046-9cd9-820a4cf00367",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,0.68333,0,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "7d32c9a8-b282-48bb-8fdb-a99440053337",
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false
-        },
-        {
-          "__type": "TriggerObject",
-          "__guid": "ffd58911-a451-4385-8df5-32e66bb263f2",
-          "triggerType": "FINISH"
-        }
-      ]
-    },
-    {
       "__guid": "faeb51b7-b410-4603-a2ab-bfba3135080c",
       "Flags": 0,
       "Name": "Player",
-      "Position": "-2.052856,-9.282333,37.26415",
+      "Position": "-1374.928,-9.282333,1.475452",
       "Tags": "player,solid",
       "Enabled": true,
       "Components": [
@@ -334,7 +385,7 @@
       "__guid": "d21b6b22-3100-4203-9ba6-ced3fecee729",
       "Flags": 0,
       "Name": "Screen",
-      "Position": "-81.30196,-126.0521,57.26855",
+      "Position": "-1224.409,-126.0521,57.26855",
       "Enabled": true,
       "Components": [
         {
@@ -373,9 +424,9 @@
       "__guid": "163018a5-f7eb-403f-9f5c-508d1fdec7a1",
       "Flags": 0,
       "Name": "Slope Plane",
-      "Position": "207.0233,-32.64474,-22.38121",
+      "Position": "816.885,5.89719,894.0522",
       "Rotation": "0,-0.2385342,0,0.9711341",
-      "Scale": "41.79999,4.199996,1",
+      "Scale": "41.79999,15,1",
       "Enabled": true,
       "Components": [
         {
@@ -397,51 +448,63 @@
       ]
     },
     {
-      "__guid": "c2a4479a-f6f8-4649-a4ac-14f709e85fad",
+      "__guid": "64caaa1e-3774-4ac0-8ea0-4b99ca467b55",
       "Flags": 0,
-      "Name": "prop_bathtub (1)",
-      "Position": "976.5867,97.18366,493.4076",
-      "Tags": "prop,solid",
+      "Name": "Prop Spawners",
       "Enabled": true,
-      "__Prefab": "prefabs/props/prop_bathtub.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "504b57eb-8043-4e92-a7c9-84c2147ea32d",
-      "Flags": 0,
-      "Name": "prop_couch (2)",
-      "Position": "1099.144,-50.44342,545.8165",
-      "Tags": "solid,prop",
-      "Enabled": true,
-      "__Prefab": "prefabs/props/prop_couch.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "1e230b81-6212-4f26-beb7-d8d74146a42c",
-      "Flags": 0,
-      "Name": "prop_truck (2)",
-      "Position": "1368.219,66.21392,675.6853",
-      "Tags": "prop,solid",
-      "Enabled": true,
-      "__Prefab": "prefabs/props/prop_truck.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "2697054c-1d60-4c5b-88c6-06b5155f24d6",
-      "Flags": 0,
-      "Name": "prop_wheel (2)",
-      "Position": "891.386,-182.7459,447.9412",
-      "Tags": "prop,solid",
-      "Enabled": true,
-      "__Prefab": "prefabs/props/prop_wheel.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "9b6a6bac-2821-4855-a8db-9f2d3a2dad6b",
-      "Flags": 0,
-      "Name": "Prop Object ",
-      "Position": "-60.24701,-216.9723,49.88831",
-      "Enabled": true
+      "Children": [
+        {
+          "__guid": "a64af4db-43db-400a-ab81-3c94a70c162b",
+          "Flags": 0,
+          "Name": "Prop Spawr Point Obj",
+          "Position": "179.5037,-107.0883,787.6823",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PropSpawnPoint",
+              "__guid": "2f36f0ed-e1c6-4191-b209-a113ce992b2a",
+              "dataList": [],
+              "propList": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_bathtub.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_couch.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_truck.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/props/prop_wheel.prefab"
+                }
+              ],
+              "spawnChanceList": [
+                25,
+                20,
+                10,
+                15
+              ],
+              "timeUntilSpawn": {
+                "Relative": -81993920,
+                "Passed": 81993917.0676499,
+                "Fraction": 1
+              },
+              "totalSpawnProbability": 0
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "a64f303d-b64f-4795-b22c-5360cb3c94d3",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
