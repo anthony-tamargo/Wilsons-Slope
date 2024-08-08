@@ -12,7 +12,7 @@
 	</div>
 
 	<div class="button-container">
-		<div class=button onclick=@OnStart><p>Start</p></div>
+		<div class=button onclick=@OnStarted><p>Start</p></div>
 		<div class=button onclick=@OnSettings><p>Options</p></div>
 		<div class=button onclick=@OnExit><p>Exit</p></div>
 	</div>
@@ -26,9 +26,13 @@
 
 @code
 {
-	void OnStart()
+
+
+	void OnStarted()
 	{
 		Log.Info("Started Game");
+		GameManager.Instance.UpdateGameState(GameState.ROUND_START);	
+
 	}
 
 	void OnSettings()
@@ -39,6 +43,7 @@
 	{
 		Log.Info("Exited Game");
 	}
+	
 
 	protected override int BuildHash() 
 	{

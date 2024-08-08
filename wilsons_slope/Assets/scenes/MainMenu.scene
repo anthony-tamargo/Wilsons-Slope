@@ -48,6 +48,14 @@
           "__guid": "ed9cb7c5-b253-4aa1-8bd1-ba854f4000a8"
         }
       ]
+    },
+    {
+      "__guid": "bc886169-31ff-41ad-bc74-70772525e795",
+      "Flags": 0,
+      "Name": "Game Manager (1)",
+      "Enabled": true,
+      "__Prefab": "prefabs/managers/manager_game.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

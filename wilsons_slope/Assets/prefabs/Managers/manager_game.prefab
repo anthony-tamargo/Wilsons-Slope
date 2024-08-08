@@ -1,0 +1,24 @@
+{
+  "RootObject": {
+    "__guid": "2da17cad-5b08-42e6-aafb-80dd923c71be",
+    "Flags": 0,
+    "Name": "manager_game",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "GameManager",
+        "__guid": "68c4ead8-3abc-445b-8309-87ff0e526955",
+        "gameSceneRef": "scenes/minimal.scene",
+        "menuSceneRef": "scenes/mainmenu.scene"
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

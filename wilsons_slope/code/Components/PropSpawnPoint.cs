@@ -18,7 +18,7 @@ public sealed class PropSpawnPoint : Component
 
 		InitializeSpawnDataList();
 		CalculateTotalSpawnProbability();
-		Log.Info(totalSpawnProbability);
+		//Log.Info(totalSpawnProbability);
 
 		
 	}

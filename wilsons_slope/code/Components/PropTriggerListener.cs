@@ -10,19 +10,19 @@ public sealed class PropTriggerListener : Component , Component.ITriggerListener
 			var trigger = other.Components.Get<TriggerObject>();
 			if(trigger.triggerType == TriggerObject.TriggerType.DESTROY)
 			{	
-				Log.Info(GameObject.Parent.Name + " entered " + trigger.triggerType);
+				//Log.Info(GameObject.Parent.Name + " entered " + trigger.triggerType);
 				GameObject.Parent.Destroy();
 			}
 			else
 			{
-				Log.Info(GameObject.Parent.Name + " entered " + trigger.triggerType + ",not a Destory Trigger");
+				//Log.Info(GameObject.Parent.Name + " entered " + trigger.triggerType + ",not a Destory Trigger");
 			
 			}
 
 		}
 		else
 		{
-			Log.Info(GameObject.Parent.Name + " couldn't find TriggerObject component");
+			//Log.Info(GameObject.Parent.Name + " couldn't find TriggerObject component");
 		}
 
 	}
