@@ -5,7 +5,82 @@ MainMenu
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #444;
+
+
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: poppins;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color:#686D76 ;
+
+	pointer-events: all;
+
+	>.header
+	{
+		> .game-title 
+		{
+			position: absolute;
+			left: 25%;
+			justify-content: flex-start;
+			font-size: 200px;
+			font-weight: 600;	
+		
+			
+		}
+		> .icon
+		{
+			position: absolute;
+			top:6.75%;
+			left: 55%;	
+
+		}
+	}
+		
+	.button-container
+	{
+		position: absolute;
+		top: 50%;
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		padding:55px;
+		border-radius: 25px;;
+		
+		background-color: #373A40;
+		>.button
+		{
+			background-color:#DC5F00;
+			font-size: 35px;
+			justify-content: center;
+			padding: 10px 45px;
+			border-radius: 15px;
+			transition: all 0.1s ease;
+			
+
+			>p
+			{
+				color:#0C0C0C ;
+			}
+
+			&:hover{
+				transform: scale(1.1);
+				sound-in:ui.button.over;
+			}
+			&:active{
+				background-color: #ff9100;
+			}
+	
+			
+
+		}
+	}
+	
+
+
+	
 
 
 }

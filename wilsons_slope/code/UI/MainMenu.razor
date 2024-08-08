@@ -3,17 +3,42 @@
 @inherits PanelComponent
 
 <root>
-	<div class="game-title">
 
+
+
+	<div class="header">	
+		<h1 class="game-title">Slope</h1>
+		<img class="icon" src="icons/icon.png" alt="">	
 	</div>
-	<div class=menu-container></div>
+
+	<div class="button-container">
+		<div class=button onclick=@OnStart><p>Start</p></div>
+		<div class=button onclick=@OnSettings><p>Options</p></div>
+		<div class=button onclick=@OnExit><p>Exit</p></div>
+	</div>
+	
+	
+
+	
+
 	
 </root>
 
 @code
 {
+	void OnStart()
+	{
+		Log.Info("Started Game");
+	}
 
-
+	void OnSettings()
+	{
+		Log.Info("Opened Settings");
+	}
+	void OnExit()
+	{
+		Log.Info("Exited Game");
+	}
 
 	protected override int BuildHash() 
 	{
