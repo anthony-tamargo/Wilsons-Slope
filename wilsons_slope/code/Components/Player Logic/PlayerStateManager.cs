@@ -18,10 +18,6 @@ public sealed class PlayerStateManager : Component
 	{
 		ChangePlayerState(PLAYER_STATES.STARTED);
 	}
-	protected override void OnUpdate(){
-		//Log.Info(currentState);
-	}
-
 	public void ChangePlayerState(PLAYER_STATES state)
 	{
 		if (currentState == state) return;
@@ -29,20 +25,20 @@ public sealed class PlayerStateManager : Component
 		switch(state)
 		{
 			case PLAYER_STATES.STARTED:
-			// before player crosses start line
 			playerTimer.RestartTimer();
 			break;
 			case PLAYER_STATES.IN_PROGRESS:
 			playerTimer.StartTimer();
-			// player crosses start line, walking up slope
+			GameManager.Instance.UpdateGameState(GameState.ROUND_IN_PROGRESS);
 			break;
 			case PLAYER_STATES.FINISH:
 			playerTimer.StopTimer();
-			// player crosses finish line
+			playerTimer.SetPlayerBestTime();
+			GameManager.Instance.UpdateGameState(GameState.ROUND_OVER);
 			break;
 			case PLAYER_STATES.DIED:
-			// player died to a prop
 			playerTimer.StopTimer();
+			GameManager.Instance.UpdateGameState(GameState.ROUND_OVER);
 			break;
 		}
 	}

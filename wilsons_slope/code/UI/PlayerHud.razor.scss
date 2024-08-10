@@ -8,14 +8,26 @@ PlayerHud
 	font-family: Poppins;
 	font-size: 24px;
 
-	.vitals{
+	.curTimer{
 		position:absolute;
-		top:32px;
-		left:32px;
+		top:82%;
+		left:42%;
 		font-size:64px;
 		font-weight:bold;
 		text-stroke: 8px black;
 		color:white;
-		flex-direction: column;
+		flex-direction: row;
+
+	}
+	.sessionPBTimer
+	{
+		position:absolute;
+		top:90%;
+		left:46%;
+		font-size: 35px;
+		font-weight:bold;
+		color:white;
+		text-stroke: 8px black;
+		justify-content:center;
 	}
 }

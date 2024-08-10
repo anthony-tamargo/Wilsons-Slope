@@ -1,3 +1,4 @@
+using System.Dynamic;
 using Sandbox;
 
 public sealed class PlayerHealth : Component
@@ -6,6 +7,7 @@ public sealed class PlayerHealth : Component
 	[Property]public float currentHealth {get; private set;}
 	[Property] public GameObject prefabDeathPoint { get; private set;}
 	[Property] public GameObject prefabDeathGibs { get; private set;}
+	[Property] PlayerStateManager playerStateManager {get; set;}	
 	Vector3 currentPlayerPos;
 	protected override void OnStart()
 	{
@@ -46,6 +48,7 @@ public sealed class PlayerHealth : Component
 			dp.Transform.Position = currentPlayerPos;
 			dpG.Transform.Position = currentPlayerPos;
 			currentHealth = 0f;
+			playerStateManager.ChangePlayerState(PlayerStateManager.PLAYER_STATES.DIED);
 			GameObject.Destroy();
 	}
 		}

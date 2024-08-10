@@ -15,7 +15,7 @@
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
           "FieldOfView": 60,
-          "IsMainCamera": true,
+          "IsMainCamera": false,
           "Orthographic": false,
           "OrthographicHeight": 1204,
           "Priority": 1,
@@ -50,9 +50,9 @@
       ]
     },
     {
-      "__guid": "bc886169-31ff-41ad-bc74-70772525e795",
+      "__guid": "63fedf34-ab38-422a-828f-0cfc112f3d36",
       "Flags": 0,
-      "Name": "Game Manager (1)",
+      "Name": "manager_game (1)",
       "Enabled": true,
       "__Prefab": "prefabs/managers/manager_game.prefab",
       "__PrefabVariables": {}

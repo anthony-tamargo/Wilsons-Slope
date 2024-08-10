@@ -3,8 +3,8 @@ using Sandbox.UI;
 
 public sealed class PlayerCollisionListener : Component, Component.ICollisionListener
 {
-	[Property]
-	PlayerHealth playerHealth {get; set;}
+	[Property] PlayerHealth playerHealth {get; set;}
+	[Property] PlayerStateManager playerStateManager {get; set;}	
 
 	void ICollisionListener.OnCollisionStart(Sandbox.Collision other)
 	{
@@ -14,6 +14,8 @@ public sealed class PlayerCollisionListener : Component, Component.ICollisionLis
 			if(colRef.colType == CollisionObject.CollisionType.PROP)
 			{
 				playerHealth.Death();
+				
+
 				return;
 			}
 			else

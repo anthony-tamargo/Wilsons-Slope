@@ -91,6 +91,12 @@
             "component_id": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
             "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
             "component_type": "PlayerHealth"
+          },
+          "playerStateManager": {
+            "_type": "component",
+            "component_id": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
+            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
+            "component_type": "PlayerStateManager"
           }
         },
         {
@@ -98,6 +104,12 @@
           "__guid": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
           "currentHealth": 0,
           "maxHealth": 100,
+          "playerStateManager": {
+            "_type": "component",
+            "component_id": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
+            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
+            "component_type": "PlayerStateManager"
+          },
           "prefabDeathGibs": {
             "_type": "gameobject",
             "prefab": "prefabs/death stuff/deathpoint_gibs.prefab"
@@ -236,12 +248,6 @@
         {
           "__type": "PlayerHud",
           "__guid": "3a972bbb-8933-4a8a-94d0-3e5cf097261e",
-          "playerHealth": {
-            "_type": "component",
-            "component_id": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
-            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-            "component_type": "PlayerHealth"
-          },
           "playerStateManager": {
             "_type": "component",
             "component_id": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
@@ -327,8 +333,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.7559966,
+                "Relative": -82159144,
+                "Passed": 82159141.6500214,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -378,8 +384,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.7560139,
+                "Relative": -82159144,
+                "Passed": 82159141.6500398,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -429,8 +435,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75602931,
+                "Relative": -82159144,
+                "Passed": 82159141.6500582,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -480,8 +486,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75604421,
+                "Relative": -82159144,
+                "Passed": 82159141.6500735,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -531,8 +537,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.7560582,
+                "Relative": -82159144,
+                "Passed": 82159141.6500889,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -582,8 +588,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75607301,
+                "Relative": -82159144,
+                "Passed": 82159141.6501037,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -633,8 +639,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.7560873,
+                "Relative": -82159144,
+                "Passed": 82159141.6501189,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -684,8 +690,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75610161,
+                "Relative": -82159144,
+                "Passed": 82159141.6501333,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -735,8 +741,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75611551,
+                "Relative": -82159144,
+                "Passed": 82159141.6501486,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -786,8 +792,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.7561299,
+                "Relative": -82159144,
+                "Passed": 82159141.65016401,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -837,8 +843,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75614391,
+                "Relative": -82159144,
+                "Passed": 82159141.6501791,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -888,8 +894,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75615841,
+                "Relative": -82159144,
+                "Passed": 82159141.650194,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -939,8 +945,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75617291,
+                "Relative": -82159144,
+                "Passed": 82159141.6502084,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -990,8 +996,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75618711,
+                "Relative": -82159144,
+                "Passed": 82159141.65022351,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1041,8 +1047,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.756201,
+                "Relative": -82159144,
+                "Passed": 82159141.6502385,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1092,8 +1098,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.7562153,
+                "Relative": -82159144,
+                "Passed": 82159141.6502534,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1143,8 +1149,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75623131,
+                "Relative": -82159144,
+                "Passed": 82159141.65026811,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1194,8 +1200,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.7562458,
+                "Relative": -82159144,
+                "Passed": 82159141.6502826,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1245,8 +1251,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75625971,
+                "Relative": -82159144,
+                "Passed": 82159141.6502972,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1296,8 +1302,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.7562741,
+                "Relative": -82159144,
+                "Passed": 82159141.6503123,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1347,8 +1353,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.75628841,
+                "Relative": -82159144,
+                "Passed": 82159141.6503274,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1398,8 +1404,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82105640,
-                "Passed": 82105643.7563025,
+                "Relative": -82159144,
+                "Passed": 82159141.6503422,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1661,6 +1667,45 @@
               "SkyColor": "0.2532,0.32006,0.35349,1"
             }
           ]
+        }
+      ]
+    },
+    {
+      "__guid": "db62197b-fb4d-4901-9b0b-ad83504ffc64",
+      "Flags": 0,
+      "Name": "manager_game (1)",
+      "Enabled": true,
+      "__Prefab": "prefabs/managers/manager_game.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "089e4814-7885-4659-a29f-320595d88a07",
+      "Flags": 0,
+      "Name": "Finish Trigger",
+      "Position": "-1107.595,-17.3542,4.741791",
+      "Scale": "0.5,25,0.09999993",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "b79e097a-24ee-40fd-892a-2f5d0cd937b2",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,0.68333,0,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "e836cdc4-d040-4d48-bd96-e9707879c44f",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
+        },
+        {
+          "__type": "TriggerObject",
+          "__guid": "0b4d7b76-31c3-4fdc-8b84-8abd27ac08eb",
+          "triggerType": "FINISH"
         }
       ]
     }

@@ -10,23 +10,38 @@ public sealed class PropSpawnPoint : Component
 	[Property] public RealTimeUntil timeUntilSpawn {get;set;}
 	[Property]public int totalSpawnProbability {get;private set;}
 	private bool isSpawningActive {get;set;}
-	
+
+	protected override void OnEnabled()
+	{
+		GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
+	}
+	protected override void OnDisabled()
+	{
+		GameManager.OnGameStateChanged -= GameManager_OnGameStateChanged;
+	}
 	protected override void OnStart()
 	{
 		timeUntilSpawn = 5f;
-		isSpawningActive = true; // we want to come back to this once we have a gamemanager made and use it to dictate when props can spawn
-
 		InitializeSpawnDataList();
 		CalculateTotalSpawnProbability();
-		//Log.Info(totalSpawnProbability);
-
-		
+	}
+	private void GameManager_OnGameStateChanged(GameState state)
+	{
+		if(state == GameState.ROUND_START || state == GameState.ROUND_IN_PROGRESS)
+		{
+			isSpawningActive = true;
+		}
+		else 
+		{
+			isSpawningActive = false;
+		}
 	}
 
 	protected override void OnUpdate()
 	{
 		HandlePropSpawn();
 	}
+
 	private void HandlePropSpawn()
 	{
 		if (!isSpawningActive)
@@ -71,7 +86,6 @@ public sealed class PropSpawnPoint : Component
 		GameObject propToSpawn;
 		int currentWeight = 0;
 		
-		
 		foreach (var data in dataList)
 		{
 			currentWeight += data.spawnWeight;
@@ -80,12 +94,8 @@ public sealed class PropSpawnPoint : Component
 					propToSpawn = data.propRef;
 					return propToSpawn;
 				}	
-
 		}
-
-
 		return null;
-
 	}
 
 	

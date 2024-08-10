@@ -1,15 +1,15 @@
 {
   "RootObject": {
-    "__guid": "2da17cad-5b08-42e6-aafb-80dd923c71be",
+    "__guid": "bc886169-31ff-41ad-bc74-70772525e795",
     "Flags": 0,
     "Name": "manager_game",
     "Enabled": true,
     "Components": [
       {
         "__type": "GameManager",
-        "__guid": "68c4ead8-3abc-445b-8309-87ff0e526955",
-        "gameSceneRef": "scenes/minimal.scene",
-        "menuSceneRef": "scenes/mainmenu.scene"
+        "__guid": "0eda4cb9-6c2a-46aa-9eb4-dad228d30714",
+        "sceneGame": "scenes/gamearea.scene",
+        "sceneMainMenu": "scenes/mainmenu.scene"
       }
     ],
     "Children": [],

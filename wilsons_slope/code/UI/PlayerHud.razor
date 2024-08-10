@@ -3,17 +3,16 @@
 @inherits PanelComponent
 
 <root>
-	<div class="vitals">
-		<p class="health">❤️@playerHealth.currentHealth</p>
-		<p class="timer">🕒@GetCurrentTimeToString()</p>
-	</div>
+	
+		<p class="curTimer">⏱️@GetCurrentTimeToString()</p>
+		<p class="sessionPBTimer">🕒@GetBestTimeToString()</p>
+
 </root>
 
 @code
 {
 
 	[Property] PlayerTimer playerTimer {get; set;}
-	[Property] PlayerHealth playerHealth{get; set;}
 	[Property]	PlayerStateManager playerStateManager{get; set;}
 	
 
@@ -24,8 +23,15 @@
 		var seconds = (int)timer%60;
 		return $"{minutes:00}:{seconds:00}";
 	}
+	string GetBestTimeToString()
+	{
+		var best = playerTimer.playerBestTime;
+		var minutes = (int)best/60;
+		var seconds = (int)best%60;
+		return $"{minutes:00}:{seconds:00}";
+	}
 	protected override int BuildHash() 
 	{
-		return System.HashCode.Combine(playerHealth.currentHealth, GetCurrentTimeToString() );
+		return System.HashCode.Combine( GetCurrentTimeToString(), GetBestTimeToString());
 	}
 }

@@ -1,6 +1,7 @@
 using Sandbox;
 using Sandbox.UI.Tests;
 using System;
+using System.Reflection;
 
 
 public enum GameState{
@@ -13,58 +14,16 @@ public enum GameState{
 
 public sealed class GameManager : Component
 {
-	[Property]public SceneFile gameSceneRef;
-	[Property]public SceneFile menuSceneRef;
+	[Property]public SceneFile sceneGame;
+	[Property]public SceneFile sceneMainMenu;
 	public GameState State{get;private set;}
 	public static event Action<GameState> OnGameStateChanged;
-	private static GameManager _instance;
-	public static GameManager Instance 
-	{
-		get
-		{
-			if(_instance == null)
-			{
-				var curScene = Game.ActiveScene;	
-				_instance = curScene.Components.Get<GameManager>(); // finds any components of type GameManger in current scene
-				{
-					if(_instance == null)
-					{
-						Log.Info("GameManager instance not found in the scene.");
-					}
-				}
-				
-			}
-			return _instance;
-		}
-
-		
-	}
-
+	public static GameManager Instance{get; private set;}
 
 	protected override void OnAwake()
 	{
-		
-		if(_instance !=null && _instance != this)
-		{
-			this.Destroy();
-		}
-		else
-		{
-			_instance = this;
-			GameObject.Flags = GameObjectFlags.DontDestroyOnLoad;
-		}
-		
+		Instance = this;
 	}
-
-
-	protected override void OnStart()
-	{
-		
-		
-		
-		
-	}
-
 	public void UpdateGameState(GameState newState)
 	{
 	
@@ -80,25 +39,34 @@ public sealed class GameManager : Component
 				break;
 
 				case GameState.ROUND_IN_PROGRESS:
-
+					HandleRoundInProg();
 				break;
 
 				case GameState.ROUND_OVER: 
-
+					HandleRoundOver();
 				break;
 			}
-			Log.Info("Current GameState: " + State );
+			
 			OnGameStateChanged?.Invoke(newState);
-		
+			Log.Info("Current GameState: " + State );
 	}
 
 	private void HandleMainMenu()
 	{
-		Scene.Load(menuSceneRef);
+		Scene.Load(sceneMainMenu);
 	}
 	private void HandleRoundStart()
 	{
-		Scene.Load(gameSceneRef);
+		Scene.Load(sceneGame);
+	}
+	private void HandleRoundInProg()
+	{
+
+	}
+	private async void HandleRoundOver()
+	{
+		await Task.Delay(5000);
+		UpdateGameState(GameState.ROUND_START);
 	}
 
 

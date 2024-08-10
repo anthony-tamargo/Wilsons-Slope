@@ -19,12 +19,10 @@ public sealed class PlayerTriggerListener : Component, Component.ITriggerListene
 			if(trigger.triggerType == TriggerObject.TriggerType.START)
 			{
 				playerStateManager.ChangePlayerState(PlayerStateManager.PLAYER_STATES.IN_PROGRESS);		
-				Log.Info("Player has entered the " +  PlayerStateManager.PLAYER_STATES.IN_PROGRESS + " state");
 			}
 			if(trigger.triggerType == TriggerObject.TriggerType.FINISH)
 			{
 				playerStateManager.ChangePlayerState(PlayerStateManager.PLAYER_STATES.FINISH);
-				Log.Info("Player has entered the " +  PlayerStateManager.PLAYER_STATES.FINISH + " state");
 			}
 			if(trigger.triggerType == TriggerObject.TriggerType.PROP)
 			{
