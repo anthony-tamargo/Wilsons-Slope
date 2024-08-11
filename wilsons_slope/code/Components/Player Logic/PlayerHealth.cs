@@ -1,10 +1,12 @@
 using System.Dynamic;
+using System.Security;
 using Sandbox;
 
 public sealed class PlayerHealth : Component
 {
 	[Property] public float maxHealth { get; set; }
 	[Property]public float currentHealth {get; private set;}
+	public bool isAlive { get; private set;}
 	[Property] public GameObject prefabDeathPoint { get; private set;}
 	[Property] public GameObject prefabDeathGibs { get; private set;}
 	[Property] PlayerStateManager playerStateManager {get; set;}	
@@ -12,6 +14,7 @@ public sealed class PlayerHealth : Component
 	protected override void OnStart()
 	{
 		currentHealth = maxHealth;
+		isAlive = true;
 	}
 
 	protected override void OnUpdate()
@@ -47,7 +50,9 @@ public sealed class PlayerHealth : Component
 
 			dp.Transform.Position = currentPlayerPos;
 			dpG.Transform.Position = currentPlayerPos;
+
 			currentHealth = 0f;
+			isAlive = false;
 			playerStateManager.ChangePlayerState(PlayerStateManager.PLAYER_STATES.DIED);
 			GameObject.Destroy();
 	}

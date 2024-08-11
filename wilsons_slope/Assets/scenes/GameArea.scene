@@ -2,268 +2,6 @@
   "__guid": "96dfd853-bb6d-4dfa-8357-6b84e2562d2e",
   "GameObjects": [
     {
-      "__guid": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-      "Flags": 0,
-      "Name": "Player",
-      "Position": "-1374.928,-9.282333,1.475452",
-      "Tags": "player,solid",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.CharacterController",
-          "__guid": "81a35002-f6aa-4fcd-b4e2-b5888cfd144e",
-          "Acceleration": 10,
-          "Bounciness": 0.2,
-          "GroundAngle": 45,
-          "Height": 64,
-          "IgnoreLayers": "",
-          "Radius": 16,
-          "StepHeight": 18,
-          "UseCollisionRules": false
-        },
-        {
-          "__type": "Sandbox.Citizen.CitizenAnimationHelper",
-          "__guid": "d4f47c7e-d39f-4ae2-84cc-77e8a369dcb4",
-          "BodyWeight": 1,
-          "EyeSource": {
-            "_type": "gameobject",
-            "go": "dec2ad02-2cbe-41da-9967-6fda3ae77b1c"
-          },
-          "EyesWeight": 1,
-          "HeadWeight": 1,
-          "LookAtEnabled": false,
-          "Target": {
-            "_type": "component",
-            "component_id": "1b74cdd9-eb0b-4de1-adae-3aeee5954c53",
-            "go": "ea69b4b9-4c55-42bf-b9d4-cc18f19d6a87",
-            "component_type": "SkinnedModelRenderer"
-          }
-        },
-        {
-          "__type": "Sandbox.CapsuleCollider",
-          "__guid": "a3991d5a-d4e2-48df-a5ab-039cf21a472a",
-          "End": "0,0,60.30003",
-          "IsTrigger": false,
-          "Radius": 14.783722,
-          "Start": "0,0,0",
-          "Static": false
-        },
-        {
-          "__type": "PlayerControls",
-          "__guid": "9b45c807-0c76-49ea-bdb3-fe873feee8da",
-          "refBody": {
-            "_type": "gameobject",
-            "go": "ea69b4b9-4c55-42bf-b9d4-cc18f19d6a87"
-          },
-          "refHead": {
-            "_type": "gameobject",
-            "go": "dec2ad02-2cbe-41da-9967-6fda3ae77b1c"
-          },
-          "airControl": 0.1,
-          "crouchSpeed": 90,
-          "groundControl": 4,
-          "jumpForce": 400,
-          "maxForce": 50,
-          "runSpeed": 290,
-          "speed": 160
-        },
-        {
-          "__type": "PlayerTriggerListener",
-          "__guid": "0d72e196-a4ec-4727-adde-b02b52b919d6",
-          "playerHealth": {
-            "_type": "component",
-            "component_id": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
-            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-            "component_type": "PlayerHealth"
-          },
-          "playerStateManager": {
-            "_type": "component",
-            "component_id": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
-            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-            "component_type": "PlayerStateManager"
-          }
-        },
-        {
-          "__type": "PlayerCollisionListener",
-          "__guid": "d12676bf-8dd4-4db8-aff8-2b1dc69403a0",
-          "playerHealth": {
-            "_type": "component",
-            "component_id": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
-            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-            "component_type": "PlayerHealth"
-          },
-          "playerStateManager": {
-            "_type": "component",
-            "component_id": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
-            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-            "component_type": "PlayerStateManager"
-          }
-        },
-        {
-          "__type": "PlayerHealth",
-          "__guid": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
-          "currentHealth": 0,
-          "maxHealth": 100,
-          "playerStateManager": {
-            "_type": "component",
-            "component_id": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
-            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-            "component_type": "PlayerStateManager"
-          },
-          "prefabDeathGibs": {
-            "_type": "gameobject",
-            "prefab": "prefabs/death stuff/deathpoint_gibs.prefab"
-          },
-          "prefabDeathPoint": {
-            "_type": "gameobject",
-            "prefab": "prefabs/death stuff/deathpoint.prefab"
-          }
-        },
-        {
-          "__type": "PlayerStateManager",
-          "__guid": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
-          "playerTimer": {
-            "_type": "component",
-            "component_id": "45d91dba-6305-44a3-b9f0-c40c5c1d6bcd",
-            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-            "component_type": "PlayerTimer"
-          }
-        },
-        {
-          "__type": "PlayerTimer",
-          "__guid": "45d91dba-6305-44a3-b9f0-c40c5c1d6bcd"
-        },
-        {
-          "__type": "Sandbox.Rigidbody",
-          "__guid": "08de3236-2db2-490f-997f-9408f7b7d021",
-          "AngularDamping": 0,
-          "Gravity": false,
-          "LinearDamping": 0,
-          "Locking": {
-            "X": true,
-            "Y": true,
-            "Z": true,
-            "Pitch": true,
-            "Yaw": true,
-            "Roll": true
-          },
-          "MassCenterOverride": "0,0,0",
-          "MassOverride": 0,
-          "MotionEnabled": true,
-          "OverrideMassCenter": false,
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "dec2ad02-2cbe-41da-9967-6fda3ae77b1c",
-          "Flags": 0,
-          "Name": "Head",
-          "Position": "0,0,62.50104",
-          "Enabled": true
-        },
-        {
-          "__guid": "ea69b4b9-4c55-42bf-b9d4-cc18f19d6a87",
-          "Flags": 0,
-          "Name": "Body",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "1b74cdd9-eb0b-4de1-adae-3aeee5954c53",
-              "BodyGroups": 341,
-              "CreateBoneObjects": false,
-              "Model": "models/citizen/citizen.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
-            }
-          ]
-        },
-        {
-          "__guid": "37a4533a-88dc-4bf2-aedd-ca7090a884b7",
-          "Flags": 0,
-          "Name": "Camera",
-          "Position": "-183.7722,0,67.63593",
-          "Tags": "maincamera",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.CameraComponent",
-              "__guid": "43c8ea22-462f-45ba-a914-448ee676f758",
-              "BackgroundColor": "0.33333,0.46275,0.52157,1",
-              "ClearFlags": "All",
-              "FieldOfView": 60,
-              "IsMainCamera": true,
-              "Orthographic": false,
-              "OrthographicHeight": 1204,
-              "Priority": 1,
-              "RenderExcludeTags": "",
-              "RenderTags": "",
-              "TargetEye": "None",
-              "Viewport": "0,0,1,1",
-              "ZFar": 10000,
-              "ZNear": 10
-            },
-            {
-              "__type": "CameraMovement",
-              "__guid": "b038e586-d2e6-49f7-89a7-28f2155e23ac",
-              "bodyRef": {
-                "_type": "gameobject",
-                "go": "ea69b4b9-4c55-42bf-b9d4-cc18f19d6a87"
-              },
-              "distance": 300,
-              "headRef": {
-                "_type": "gameobject",
-                "go": "dec2ad02-2cbe-41da-9967-6fda3ae77b1c"
-              },
-              "player": {
-                "_type": "component",
-                "component_id": "9b45c807-0c76-49ea-bdb3-fe873feee8da",
-                "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-                "component_type": "PlayerControls"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "__guid": "d21b6b22-3100-4203-9ba6-ced3fecee729",
-      "Flags": 0,
-      "Name": "Screen Canvas",
-      "Position": "-1224.409,-126.0521,57.26855",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ScreenPanel",
-          "__guid": "e4f5f249-c50a-49e1-9e5c-c055ff971db5",
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ZIndex": 100
-        },
-        {
-          "__type": "PlayerHud",
-          "__guid": "3a972bbb-8933-4a8a-94d0-3e5cf097261e",
-          "playerStateManager": {
-            "_type": "component",
-            "component_id": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
-            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-            "component_type": "PlayerStateManager"
-          },
-          "playerTimer": {
-            "_type": "component",
-            "component_id": "45d91dba-6305-44a3-b9f0-c40c5c1d6bcd",
-            "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-            "component_type": "PlayerTimer"
-          }
-        }
-      ]
-    },
-    {
       "__guid": "163018a5-f7eb-403f-9f5c-508d1fdec7a1",
       "Flags": 0,
       "Name": "Slope Plane",
@@ -333,8 +71,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6500214,
+                "Relative": -82342344,
+                "Passed": 82342347.6534684,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -384,8 +122,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6500398,
+                "Relative": -82342344,
+                "Passed": 82342347.653488,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -435,8 +173,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6500582,
+                "Relative": -82342344,
+                "Passed": 82342347.6535042,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -486,8 +224,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6500735,
+                "Relative": -82342344,
+                "Passed": 82342347.6535192,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -537,8 +275,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6500889,
+                "Relative": -82342344,
+                "Passed": 82342347.6535348,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -588,8 +326,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6501037,
+                "Relative": -82342344,
+                "Passed": 82342347.6535499,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -639,8 +377,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6501189,
+                "Relative": -82342344,
+                "Passed": 82342347.653565,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -690,8 +428,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6501333,
+                "Relative": -82342344,
+                "Passed": 82342347.6535795,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -741,8 +479,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6501486,
+                "Relative": -82342344,
+                "Passed": 82342347.6535937,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -792,8 +530,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.65016401,
+                "Relative": -82342344,
+                "Passed": 82342347.6536077,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -843,8 +581,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6501791,
+                "Relative": -82342344,
+                "Passed": 82342347.6536224,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -894,8 +632,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.650194,
+                "Relative": -82342344,
+                "Passed": 82342347.6536367,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -945,8 +683,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6502084,
+                "Relative": -82342344,
+                "Passed": 82342347.6536513,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -996,8 +734,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.65022351,
+                "Relative": -82342344,
+                "Passed": 82342347.6536654,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1047,8 +785,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6502385,
+                "Relative": -82342344,
+                "Passed": 82342347.6536798,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1098,8 +836,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6502534,
+                "Relative": -82342344,
+                "Passed": 82342347.6536941,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1149,8 +887,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.65026811,
+                "Relative": -82342344,
+                "Passed": 82342347.6537089,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1200,8 +938,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6502826,
+                "Relative": -82342344,
+                "Passed": 82342347.6537301,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1251,8 +989,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6502972,
+                "Relative": -82342344,
+                "Passed": 82342347.6537472,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1302,8 +1040,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6503123,
+                "Relative": -82342344,
+                "Passed": 82342347.6537619,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1353,8 +1091,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6503274,
+                "Relative": -82342344,
+                "Passed": 82342347.653778,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1404,8 +1142,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82159144,
-                "Passed": 82159141.6503422,
+                "Relative": -82342344,
+                "Passed": 82342347.6537925,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1583,8 +1321,8 @@
           "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
           "Flags": 0,
           "Name": "Start Plane",
-          "Position": "-1119.874,0,0",
-          "Scale": "5,15,5",
+          "Position": "-1530.094,0,0",
+          "Scale": "12.6,15,5",
           "Tags": "solid",
           "Enabled": true,
           "Components": [
@@ -1671,18 +1409,10 @@
       ]
     },
     {
-      "__guid": "db62197b-fb4d-4901-9b0b-ad83504ffc64",
-      "Flags": 0,
-      "Name": "manager_game (1)",
-      "Enabled": true,
-      "__Prefab": "prefabs/managers/manager_game.prefab",
-      "__PrefabVariables": {}
-    },
-    {
       "__guid": "089e4814-7885-4659-a29f-320595d88a07",
       "Flags": 0,
-      "Name": "Finish Trigger",
-      "Position": "-1107.595,-17.3542,4.741791",
+      "Name": "Finish Trigger PLACEHOLDER",
+      "Position": "-967.7148,-17.3542,4.741791",
       "Scale": "0.5,25,0.09999993",
       "Enabled": true,
       "Components": [
@@ -1706,6 +1436,132 @@
           "__type": "TriggerObject",
           "__guid": "0b4d7b76-31c3-4fdc-8b84-8abd27ac08eb",
           "triggerType": "FINISH"
+        }
+      ]
+    },
+    {
+      "__guid": "9d4f50bb-3ec1-4014-9c29-923fba2c0cef",
+      "Flags": 0,
+      "Name": "Game Manager (1)",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GameManager",
+          "__guid": "e65ae894-e624-4856-bee4-4cca98fa4456",
+          "playerPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/player/player.prefab"
+          },
+          "spawnPointParent": {
+            "_type": "gameobject",
+            "go": "19f97f3e-1348-4c86-a119-b60218f79873"
+          },
+          "spawnPoints": []
+        }
+      ]
+    },
+    {
+      "__guid": "19f97f3e-1348-4c86-a119-b60218f79873",
+      "Flags": 0,
+      "Name": "Spawn Points",
+      "Position": "-1777.778,-2.580202,222.5905",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "73f77486-2493-4918-bcc1-08a006da622a",
+          "Flags": 0,
+          "Name": "Spawn point",
+          "Position": "-263.7017,0,-95.39285",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "0b18f441-7371-42a9-b241-dc68d065afbd",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "d9d39ff2-969d-4016-b25a-e1326e20fb69",
+          "Flags": 0,
+          "Name": "Spawn point",
+          "Position": "-263.7017,80.64134,-95.39285",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "0fcc70a2-f568-4292-9465-f17e908b7ff4",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "cb0eef3a-4e23-4c55-9955-0da0351e0e54",
+          "Flags": 0,
+          "Name": "Spawn point",
+          "Position": "-263.7017,-88.16592,-95.39285",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "051ed2a4-978c-412b-a08f-41a949133e96",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "d563b7da-299e-402f-90d9-c677b82969f9",
+          "Flags": 0,
+          "Name": "Spawn point",
+          "Position": "-263.7017,-172.4955,-95.39285",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "982e07b1-7623-4d68-9e49-4a0962e96922",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "6760286f-30d2-437c-bc0b-5b97f0292d4f",
+          "Flags": 0,
+          "Name": "Spawn point",
+          "Position": "-263.7017,166.3985,-95.39285",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "16dded7e-e712-4672-afc5-b3631deb9706",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "9cc2cd4c-c2bb-4133-b3b8-556470ae2be5",
+          "Flags": 0,
+          "Name": "Spawn point",
+          "Position": "-263.7017,251.4411,-95.39285",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "ec8d1e0f-a660-4819-8b9f-5335dc749444",
+              "BodyGroups": 18446744073709551615,
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
         }
       ]
     }

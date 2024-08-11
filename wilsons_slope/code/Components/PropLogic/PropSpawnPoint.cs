@@ -2,6 +2,18 @@ using Microsoft.VisualBasic;
 using Sandbox;
 using System;
 using System.Collections.Generic;
+
+public class SpawnData
+{
+    public GameObject propRef;
+    public int spawnWeight;
+	public SpawnData( GameObject objRef , int spawnChance)
+	{
+		propRef = objRef;
+		spawnWeight = spawnChance;
+	}
+    
+}
 public sealed class PropSpawnPoint : Component
 {
 	[Property] List<GameObject> propList = new List<GameObject>();
@@ -102,14 +114,4 @@ public sealed class PropSpawnPoint : Component
 	
 }
 
-public class SpawnData
-{
-    public GameObject propRef;
-    public int spawnWeight;
-	public SpawnData( GameObject objRef , int spawnChance)
-	{
-		propRef = objRef;
-		spawnWeight = spawnChance;
-	}
-    
-}
+

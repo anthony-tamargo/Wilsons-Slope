@@ -50,11 +50,11 @@
       ]
     },
     {
-      "__guid": "63fedf34-ab38-422a-828f-0cfc112f3d36",
+      "__guid": "5f6e813f-2a84-428a-b8db-82e2247ef17e",
       "Flags": 0,
-      "Name": "manager_game (1)",
+      "Name": "Scene Manager",
       "Enabled": true,
-      "__Prefab": "prefabs/managers/manager_game.prefab",
+      "__Prefab": "prefabs/managers/scene manager.prefab",
       "__PrefabVariables": {}
     }
   ],

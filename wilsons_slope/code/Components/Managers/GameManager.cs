@@ -5,7 +5,6 @@ using System.Reflection;
 
 
 public enum GameState{
-	MAIN_MENU, // when first launching game / quitting out of current round
 	ROUND_START, // a new round just started, respawn player if dead, reset time, etc
 	ROUND_IN_PROGRESS, // player hasnt died yet, currently working up slope 
 	ROUND_OVER, // player either dies or reaches finish line, 
@@ -14,8 +13,9 @@ public enum GameState{
 
 public sealed class GameManager : Component
 {
-	[Property]public SceneFile sceneGame;
-	[Property]public SceneFile sceneMainMenu;
+	[Property] GameObject playerPrefab;
+	[Property] GameObject spawnPointParent;
+	[Property] List<Transform> spawnPoints = new List<Transform>();
 	public GameState State{get;private set;}
 	public static event Action<GameState> OnGameStateChanged;
 	public static GameManager Instance{get; private set;}
@@ -24,16 +24,31 @@ public sealed class GameManager : Component
 	{
 		Instance = this;
 	}
+	protected override void OnStart()
+	{
+		InitializeSpawnPoints();
+		UpdateGameState(GameState.ROUND_START);
+	}
+	private void InitializeSpawnPoints()
+	{
+		for (int i = 0; i < spawnPointParent.Children.Count; i++)
+		{
+			spawnPoints.Add(spawnPointParent.Children[i].Transform.World);
+		}
+	}
+	private int ReturnRandomSpawn()
+	{
+		Random randInt = new Random();
+		int spawnPos = randInt.Next(0, spawnPoints.Count + 1);
+		return spawnPos;
+	}
+
 	public void UpdateGameState(GameState newState)
 	{
 	
 			State = newState;
 			switch(newState)
 			{
-				case GameState.MAIN_MENU:
-					HandleMainMenu();
-				break;
-
 				case GameState.ROUND_START:
 					HandleRoundStart();
 				break;
@@ -51,13 +66,12 @@ public sealed class GameManager : Component
 			Log.Info("Current GameState: " + State );
 	}
 
-	private void HandleMainMenu()
-	{
-		Scene.Load(sceneMainMenu);
-	}
+
 	private void HandleRoundStart()
 	{
-		Scene.Load(sceneGame);
+		var player = playerPrefab.Clone();
+		player.Transform.Position = spawnPoints[ReturnRandomSpawn()].Position;
+		
 	}
 	private void HandleRoundInProg()
 	{
@@ -65,9 +79,10 @@ public sealed class GameManager : Component
 	}
 	private async void HandleRoundOver()
 	{
-		await Task.Delay(5000);
+		await Task.DelayRealtimeSeconds(5);
 		UpdateGameState(GameState.ROUND_START);
 	}
+		
 
 
 }

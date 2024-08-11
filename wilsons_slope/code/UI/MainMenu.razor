@@ -31,8 +31,7 @@
 	void OnStarted()
 	{
 		Log.Info("Started Game");
-		GameManager.Instance.UpdateGameState(GameState.ROUND_START);
-
+		Scene.Load(SceneManager.Instance.GetSceneFile(1));
 	}
 
 	void OnSettings()

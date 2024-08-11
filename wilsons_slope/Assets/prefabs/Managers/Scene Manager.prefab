@@ -1,0 +1,26 @@
+{
+  "RootObject": {
+    "__guid": "5f6e813f-2a84-428a-b8db-82e2247ef17e",
+    "Flags": 0,
+    "Name": "scene manager",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "SceneManager",
+        "__guid": "a1b43281-da83-4399-8e31-c08fed48f370",
+        "gameScenes": [
+          "scenes/mainmenu.scene",
+          "scenes/gamearea.scene"
+        ]
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
