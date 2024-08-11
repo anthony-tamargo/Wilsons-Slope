@@ -5,12 +5,17 @@
     "Name": "deathpoint_gibs",
     "Tags": "gibs",
     "Enabled": true,
+    "Components": [
+      {
+        "__type": "PlayerDeathGibs",
+        "__guid": "f9f5f87b-998b-4ce4-9e71-e0155d6f16e1"
+      }
+    ],
     "Children": [
       {
         "__guid": "9b02bf08-acf5-4d25-a56d-9bab9fd785b2",
         "Flags": 0,
         "Name": "Head",
-        "Tags": "gibs",
         "Enabled": true,
         "Components": [
           {
@@ -43,8 +48,10 @@
             "Gravity": true,
             "LinearDamping": 0,
             "Locking": {},
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 0,
             "MotionEnabled": true,
+            "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
             "StartAsleep": false
           }
@@ -54,7 +61,6 @@
         "__guid": "55db9c59-31cc-4d2b-8c40-ce788004e6bf",
         "Flags": 0,
         "Name": "Torso",
-        "Tags": "gibs",
         "Enabled": true,
         "Components": [
           {
@@ -87,8 +93,10 @@
             "Gravity": true,
             "LinearDamping": 0,
             "Locking": {},
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 0,
             "MotionEnabled": true,
+            "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
             "StartAsleep": false
           }
@@ -98,7 +106,6 @@
         "__guid": "2ce61d8e-0ffb-4904-b59e-2ad2e514ab78",
         "Flags": 0,
         "Name": "L.Arm",
-        "Tags": "gibs",
         "Enabled": true,
         "Components": [
           {
@@ -131,8 +138,10 @@
             "Gravity": true,
             "LinearDamping": 0,
             "Locking": {},
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 0,
             "MotionEnabled": true,
+            "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
             "StartAsleep": false
           }
@@ -174,8 +183,10 @@
             "Gravity": true,
             "LinearDamping": 0,
             "Locking": {},
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 0,
             "MotionEnabled": true,
+            "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
             "StartAsleep": false
           }
@@ -217,8 +228,10 @@
             "Gravity": true,
             "LinearDamping": 0,
             "Locking": {},
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 0,
             "MotionEnabled": true,
+            "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
             "StartAsleep": false
           }
@@ -260,8 +273,10 @@
             "Gravity": true,
             "LinearDamping": 0,
             "Locking": {},
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 0,
             "MotionEnabled": true,
+            "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
             "StartAsleep": false
           }
@@ -303,8 +318,10 @@
             "Gravity": true,
             "LinearDamping": 0,
             "Locking": {},
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 0,
             "MotionEnabled": true,
+            "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
             "StartAsleep": false
           }
@@ -346,8 +363,10 @@
             "Gravity": true,
             "LinearDamping": 0,
             "Locking": {},
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 0,
             "MotionEnabled": true,
+            "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
             "StartAsleep": false
           }
@@ -389,8 +408,10 @@
             "Gravity": true,
             "LinearDamping": 0,
             "Locking": {},
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 0,
             "MotionEnabled": true,
+            "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
             "StartAsleep": false
           }
@@ -432,8 +453,10 @@
             "Gravity": true,
             "LinearDamping": 0,
             "Locking": {},
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 0,
             "MotionEnabled": true,
+            "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
             "StartAsleep": false
           }
@@ -475,8 +498,10 @@
             "Gravity": true,
             "LinearDamping": 0,
             "Locking": {},
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 0,
             "MotionEnabled": true,
+            "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
             "StartAsleep": false
           }

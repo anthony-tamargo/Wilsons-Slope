@@ -1,4 +1,5 @@
 using System.Dynamic;
+using System.Runtime.Intrinsics.Arm;
 using System.Security;
 using Sandbox;
 
@@ -11,22 +12,25 @@ public sealed class PlayerHealth : Component
 	Vector3 currentPlayerPos;
 	protected override void OnEnabled()
 	{
-		GameManager.OnGameStateChanged += GameManager_OnStateChanged;
 		playerStateManager.OnPlayerStateChanged += PlayerStateManager_OnPlayerStateChanged;
 	}
 	protected override void OnDisabled()
 	{
-		GameManager.OnGameStateChanged -= GameManager_OnStateChanged;
 		playerStateManager.OnPlayerStateChanged -= PlayerStateManager_OnPlayerStateChanged;
-		
 	}
-	void GameManager_OnStateChanged(GameState state)
-	{
-		
-	}
+
 	void PlayerStateManager_OnPlayerStateChanged(PlayerState state)
 	{
-		
+		if (state == PlayerState.DIED)
+		{
+			var dp = prefabDeathPoint.Clone();
+			var dpG = prefabDeathGibs.Clone();
+
+			dp.Transform.Position = currentPlayerPos;
+			dpG.Transform.Position = currentPlayerPos;
+
+			GameObject.Destroy();
+		}
 	}
 	protected override void OnStart()
 	{
@@ -54,15 +58,8 @@ public sealed class PlayerHealth : Component
 		}
 		else
 		{
-			var dp = prefabDeathPoint.Clone();
-			var dpG = prefabDeathGibs.Clone();
-
-			dp.Transform.Position = currentPlayerPos;
-			dpG.Transform.Position = currentPlayerPos;
-
 			isAlive = false;
 			playerStateManager.ChangePlayerState(PlayerState.DIED);
-			GameObject.Destroy();
 		}
 	}
 

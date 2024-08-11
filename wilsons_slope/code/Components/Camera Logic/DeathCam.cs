@@ -12,9 +12,21 @@ public sealed class DeathCam : Component
 	{
 		cam = Components.GetInChildren<CameraComponent>();
 
+		GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
+
 		HandleCamMovementInit(); // initializes cam movement vars and rotations
 	}
-
+	protected override void OnDisabled()
+	{
+		GameManager.OnGameStateChanged -= GameManager_OnGameStateChanged;	
+	}
+	void GameManager_OnGameStateChanged(GameState state)
+	{
+		if (state == GameState.ROUND_START)
+		{
+			GameObject.Parent.Destroy();
+		}
+	}
 	protected override void OnUpdate()
 	{
 		HandleCamMovement();

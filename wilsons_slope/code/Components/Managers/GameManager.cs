@@ -13,8 +13,8 @@ public enum GameState{
 
 public sealed class GameManager : Component
 {
-	[Property] GameObject playerPrefab;
-	[Property] GameObject spawnPointParent;
+	[Property] public GameObject playerPrefab {get; private set;}
+	[Property] public GameObject spawnPointParent {get; private set;}
 	[Property] List<Transform> spawnPoints = new List<Transform>();
 	public GameState State{get;private set;}
 	public static event Action<GameState> OnGameStateChanged;
@@ -39,7 +39,7 @@ public sealed class GameManager : Component
 	private int ReturnRandomSpawn()
 	{
 		Random randInt = new Random();
-		int spawnPos = randInt.Next(0, spawnPoints.Count + 1);
+		int spawnPos = randInt.Next(0, spawnPoints.Count );
 		return spawnPos;
 	}
 
@@ -71,6 +71,7 @@ public sealed class GameManager : Component
 	{
 		var player = playerPrefab.Clone();
 		player.Transform.Position = spawnPoints[ReturnRandomSpawn()].Position;
+
 		
 	}
 	private void HandleRoundInProg()
@@ -81,6 +82,7 @@ public sealed class GameManager : Component
 	{
 		await Task.DelayRealtimeSeconds(5);
 		UpdateGameState(GameState.ROUND_START);
+
 	}
 		
 
