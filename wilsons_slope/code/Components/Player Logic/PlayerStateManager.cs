@@ -1,46 +1,50 @@
+using System;
 using Sandbox;
 using Sandbox.UI.Tests;
 
-public sealed class PlayerStateManager : Component
-{
-	public enum PLAYER_STATES{
+public enum PlayerState{
 		STARTED,
 		IN_PROGRESS,
 		FINISH,
 		DIED,
 	}
+public sealed class PlayerStateManager : Component
+{
 
-	public PLAYER_STATES currentState {private set; get;}
 
-	[Property]
-	PlayerTimer playerTimer {get; set;}
+	public PlayerState currentState {private set; get;}
+
+	[Property] PlayerTimer playerTimer {get; set;}
+	public event Action<PlayerState> OnPlayerStateChanged;
 	protected override void OnStart()
 	{
-		ChangePlayerState(PLAYER_STATES.STARTED);
+		ChangePlayerState(PlayerState.STARTED);
 	}
-	public void ChangePlayerState(PLAYER_STATES state)
+	public void ChangePlayerState(PlayerState state)
 	{
 		if (currentState == state) return;
 
 		switch(state)
 		{
-			case PLAYER_STATES.STARTED:
+			case PlayerState.STARTED:
 			playerTimer.RestartTimer();
 			break;
-			case PLAYER_STATES.IN_PROGRESS:
+			case PlayerState.IN_PROGRESS:
 			playerTimer.StartTimer();
 			GameManager.Instance.UpdateGameState(GameState.ROUND_IN_PROGRESS);
 			break;
-			case PLAYER_STATES.FINISH:
+			case PlayerState.FINISH:
 			playerTimer.StopTimer();
 			playerTimer.SetPlayerBestTime();
 			GameManager.Instance.UpdateGameState(GameState.ROUND_OVER);
 			break;
-			case PLAYER_STATES.DIED:
+			case PlayerState.DIED:
 			playerTimer.StopTimer();
 			GameManager.Instance.UpdateGameState(GameState.ROUND_OVER);
 			break;
 		}
+
+		OnPlayerStateChanged?.Invoke(state);
 	}
 
 }

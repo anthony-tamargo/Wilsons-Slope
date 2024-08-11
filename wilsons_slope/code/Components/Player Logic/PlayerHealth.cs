@@ -4,16 +4,32 @@ using Sandbox;
 
 public sealed class PlayerHealth : Component
 {
-	[Property] public float maxHealth { get; set; }
-	[Property]public float currentHealth {get; private set;}
 	public bool isAlive { get; private set;}
 	[Property] public GameObject prefabDeathPoint { get; private set;}
 	[Property] public GameObject prefabDeathGibs { get; private set;}
 	[Property] PlayerStateManager playerStateManager {get; set;}	
 	Vector3 currentPlayerPos;
+	protected override void OnEnabled()
+	{
+		GameManager.OnGameStateChanged += GameManager_OnStateChanged;
+		playerStateManager.OnPlayerStateChanged += PlayerStateManager_OnPlayerStateChanged;
+	}
+	protected override void OnDisabled()
+	{
+		GameManager.OnGameStateChanged -= GameManager_OnStateChanged;
+		playerStateManager.OnPlayerStateChanged -= PlayerStateManager_OnPlayerStateChanged;
+		
+	}
+	void GameManager_OnStateChanged(GameState state)
+	{
+		
+	}
+	void PlayerStateManager_OnPlayerStateChanged(PlayerState state)
+	{
+		
+	}
 	protected override void OnStart()
 	{
-		currentHealth = maxHealth;
 		isAlive = true;
 	}
 
@@ -28,17 +44,10 @@ public sealed class PlayerHealth : Component
 			return;
 		}
 	}
-	public void Damage(float damage)
-	{
-		currentHealth -= damage;
-		if(currentHealth <= 0f)
-		{
-			Death();
-		}
-	}
+
 	public void Death()
 	{
-		if(currentHealth == 0f)
+		if(!isAlive)
 		{
 			return;
 			// this check is here in case the collisionlistener triggers this method more than once
@@ -51,12 +60,11 @@ public sealed class PlayerHealth : Component
 			dp.Transform.Position = currentPlayerPos;
 			dpG.Transform.Position = currentPlayerPos;
 
-			currentHealth = 0f;
 			isAlive = false;
-			playerStateManager.ChangePlayerState(PlayerStateManager.PLAYER_STATES.DIED);
+			playerStateManager.ChangePlayerState(PlayerState.DIED);
 			GameObject.Destroy();
-	}
 		}
+	}
 
 
 
