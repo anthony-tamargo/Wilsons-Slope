@@ -15,10 +15,14 @@ public sealed class PlayerStateManager : Component
 	public PlayerState currentState {private set; get;}
 
 	[Property] PlayerTimer playerTimer {get; set;}
+	[Property] PlayerHealth playerHealth {get; set;}
 	public event Action<PlayerState> OnPlayerStateChanged;
 	protected override void OnStart()
 	{
 		ChangePlayerState(PlayerState.STARTED);
+	}
+	protected override void OnDisabled()
+	{		
 	}
 	public void ChangePlayerState(PlayerState state)
 	{
@@ -45,6 +49,7 @@ public sealed class PlayerStateManager : Component
 		}
 
 		OnPlayerStateChanged?.Invoke(state);
+		Log.Info("Current PlayerState: " + state );
 	}
 
 }

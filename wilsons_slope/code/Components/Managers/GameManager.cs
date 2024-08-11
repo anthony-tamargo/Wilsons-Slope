@@ -16,6 +16,7 @@ public sealed class GameManager : Component
 	[Property] public GameObject playerPrefab {get; private set;}
 	[Property] public GameObject spawnPointParent {get; private set;}
 	[Property] List<Transform> spawnPoints = new List<Transform>();
+	[Property] public float timeBeforeRestart{private set; get;}
 	public GameState State{get;private set;}
 	public static event Action<GameState> OnGameStateChanged;
 	public float playerBestTimeReference {get;  set;}
@@ -70,10 +71,20 @@ public sealed class GameManager : Component
 
 	private void HandleRoundStart()
 	{
-		var player = playerPrefab.Clone();
-		player.Transform.Position = spawnPoints[ReturnRandomSpawn()].Position;
+		var plyRef = Scene.GetAllComponents<PlayerHealth>().FirstOrDefault();
+		if(plyRef is not null )
+		{
+			plyRef.GameObject.Transform.Position = spawnPoints[ReturnRandomSpawn()].Position;	
+		}
+		else
+		{
+			var ply = playerPrefab.Clone();
+			ply.Transform.Position = spawnPoints[ReturnRandomSpawn()].Position;	
+		}
+		
 
 		
+
 	}
 	private void HandleRoundInProg()
 	{
@@ -81,7 +92,7 @@ public sealed class GameManager : Component
 	}
 	private async void HandleRoundOver()
 	{
-		await Task.DelayRealtimeSeconds(5);
+		await Task.DelayRealtimeSeconds(timeBeforeRestart);
 		UpdateGameState(GameState.ROUND_START);
 
 	}
