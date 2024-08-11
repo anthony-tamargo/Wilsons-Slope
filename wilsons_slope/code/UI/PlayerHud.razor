@@ -24,7 +24,7 @@
 	}
 	string GetBestTimeToString()
 	{
-		var best = playerTimer.playerBestTime;
+		var best = GameManager.Instance.playerBestTimeReference;
 		var minutes = (int)best/60;
 		var seconds = (int)best%60;
 		return $"{minutes:00}:{seconds:00}";

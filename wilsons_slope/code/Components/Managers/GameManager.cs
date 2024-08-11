@@ -18,6 +18,7 @@ public sealed class GameManager : Component
 	[Property] List<Transform> spawnPoints = new List<Transform>();
 	public GameState State{get;private set;}
 	public static event Action<GameState> OnGameStateChanged;
+	public float playerBestTimeReference {get;  set;}
 	public static GameManager Instance{get; private set;}
 
 	protected override void OnAwake()

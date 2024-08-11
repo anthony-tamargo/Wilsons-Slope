@@ -6,7 +6,6 @@ public sealed class PlayerTimer : Component
 {
 	public float playerCurrentTime { get; private set; }
 	public float playerFinishedTime { get; private set; }
-	public float playerBestTime {get; private set;}
 	public bool isTimerActive { get; private set; }
 	public TimeSince playerTimeSinceRoundStart{ get; private set; }
 
@@ -46,17 +45,6 @@ public sealed class PlayerTimer : Component
 	{
 		isTimerActive = false;
 	}
-	public void SetPlayerBestTime()
-	{
-		if(playerBestTime < playerCurrentTime)
-		{
-			playerBestTime = playerCurrentTime;
-		}
-		else
-		{
-			playerBestTime = playerBestTime;
-		}
-	}
 	public float ReturnPlayerTime()
 	{
 		if(isTimerActive)
@@ -70,9 +58,20 @@ public sealed class PlayerTimer : Component
 			return playerCurrentTime;
 		}
 	}
+	public void SetPlayerBestTime()
+	{
+		if(GameManager.Instance.playerBestTimeReference < playerCurrentTime)
+		{
+			GameManager.Instance.playerBestTimeReference = playerCurrentTime;
+		}
+		else
+		{
+			GameManager.Instance.playerBestTimeReference = GameManager.Instance.playerBestTimeReference;
+		}
+	}
 	public float ReturnPlayerBestTime()
 	{
-		return playerBestTime;
+		return GameManager.Instance.playerBestTimeReference;
 	}
 
 

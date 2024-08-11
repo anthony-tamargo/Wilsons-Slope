@@ -122,7 +122,7 @@ public sealed class PlayerControls : Component
 		animHelper.WithLook(refHead.Transform.Rotation.Forward, 1f, .75f, .5f);
 		animHelper.MoveStyle = CitizenAnimationHelper.MoveStyles.Run;
 		animHelper.DuckLevel = isCrouching ? 1 : 0;
-	
+		
 	}
 	void UpdateCrouch()
 	{
