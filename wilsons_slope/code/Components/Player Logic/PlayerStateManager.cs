@@ -16,7 +16,6 @@ public sealed class PlayerStateManager : Component
 	public PlayerState currentState {private set; get;}
 
 	[Property] PlayerTimer playerTimer {get; set;}
-	[Property] PlayerHealth playerHealth {get; set;}
 	public event Action<PlayerState> OnPlayerStateChanged;
 	protected override void OnStart()
 	{
@@ -43,7 +42,6 @@ public sealed class PlayerStateManager : Component
 		{
 			case PlayerState.STARTED:
 				HandleStartState();
-			// player just doesn't reach this state?
 			break;
 			case PlayerState.IN_PROGRESS:
 				HandleInProgState();
@@ -63,7 +61,6 @@ public sealed class PlayerStateManager : Component
 	private void HandleStartState()
 	{
 		playerTimer.RestartTimer();
-		// player not entering this state/ exiting it properly 
 	}
 	private void HandleInProgState()
 	{
