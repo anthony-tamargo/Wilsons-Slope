@@ -36,6 +36,10 @@ public sealed class PlayerStateManager : Component
 	}
 	public void ChangePlayerState(PlayerState state)
 	{
+		if(currentState  == state)
+		{
+			return;
+		}
 		currentState = state;
 
 		switch(state)
