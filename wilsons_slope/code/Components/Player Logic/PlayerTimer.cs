@@ -60,7 +60,13 @@ public sealed class PlayerTimer : Component
 	}
 	public void SetPlayerBestTime()
 	{
-		if(GameManager.Instance.playerBestTimeReference < playerCurrentTime)
+		if(GameManager.Instance.playerBestTimeReference == 0)
+		{
+			GameManager.Instance.playerBestTimeReference = playerCurrentTime;
+			// this is kinda stupid but may work
+		}
+
+		if(playerCurrentTime < GameManager.Instance.playerBestTimeReference )
 		{
 			GameManager.Instance.playerBestTimeReference = playerCurrentTime;
 		}

@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using Sandbox;
 using Sandbox.UI.Tests;
 
@@ -20,36 +21,66 @@ public sealed class PlayerStateManager : Component
 	protected override void OnStart()
 	{
 		ChangePlayerState(PlayerState.STARTED);
+		GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
 	}
 	protected override void OnDisabled()
 	{		
+		GameManager.OnGameStateChanged -= GameManager_OnGameStateChanged;	
+	}
+
+	void GameManager_OnGameStateChanged(GameState state)
+	{
+		if(state == GameState.ROUND_START)
+		{
+			ChangePlayerState(PlayerState.STARTED);
+		}			
 	}
 	public void ChangePlayerState(PlayerState state)
 	{
-		if (currentState == state) return;
+		currentState = state;
 
 		switch(state)
 		{
 			case PlayerState.STARTED:
-			playerTimer.RestartTimer();
+				HandleStartState();
+			// player just doesn't reach this state?
 			break;
 			case PlayerState.IN_PROGRESS:
-			playerTimer.StartTimer();
-			GameManager.Instance.UpdateGameState(GameState.ROUND_IN_PROGRESS);
+				HandleInProgState();
 			break;
 			case PlayerState.FINISH:
-			playerTimer.StopTimer();
-			playerTimer.SetPlayerBestTime();
-			GameManager.Instance.UpdateGameState(GameState.ROUND_OVER);
+				HandleFinishState();
 			break;
 			case PlayerState.DIED:
-			playerTimer.StopTimer();
-			GameManager.Instance.UpdateGameState(GameState.ROUND_OVER);
+				HandleDiedState();
 			break;
 		}
 
 		OnPlayerStateChanged?.Invoke(state);
 		Log.Info("Current PlayerState: " + state );
 	}
+
+	private void HandleStartState()
+	{
+		playerTimer.RestartTimer();
+		// player not entering this state/ exiting it properly 
+	}
+	private void HandleInProgState()
+	{
+		playerTimer.StartTimer();
+		GameManager.Instance.UpdateGameState(GameState.ROUND_IN_PROGRESS);
+	}
+	private void HandleFinishState()
+{
+		playerTimer.StopTimer();
+		playerTimer.SetPlayerBestTime();
+		GameManager.Instance.UpdateGameState(GameState.ROUND_OVER);
+	}
+	private void HandleDiedState()
+	{
+		playerTimer.StopTimer();
+		GameManager.Instance.UpdateGameState(GameState.ROUND_OVER);
+	}
+
 
 }

@@ -13,11 +13,28 @@
 {
 
 	[Property]PlayerTimer playerTimer {get; set;}
-	[Property]PlayerStateManager playerStateManager{get; set;}
+	//[Property]PlayerStateManager playerStateManager{get; set;}
+	PlayerTimer plyTimer;
+	protected override void OnEnabled()
+	{
+		GameManager.OnGameStateChanged += GameManger_OnGameStateChanged;
+	}
+	protected override void OnDisabled()
+	{
+		GameManager.OnGameStateChanged -= GameManger_OnGameStateChanged;
+	}
+
+	void GameManger_OnGameStateChanged(GameState state)
+	{
+		if (state == GameState.ROUND_START)
+		{
+			plyTimer = Scene.GetAllComponents<PlayerTimer>().FirstOrDefault();
+		}
+	}
 	
 	string GetCurrentTimeToString()
 	{
-		var timer = playerTimer.playerCurrentTime;
+		var timer = plyTimer.playerCurrentTime;
 		var minutes = (int)timer/60;
 		var seconds = (int)timer%60;
 		return $"{minutes:00}:{seconds:00}";

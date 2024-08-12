@@ -99,8 +99,6 @@
       {
         "__type": "PlayerHealth",
         "__guid": "e1e1f562-9354-4d92-b88b-abff3f72f8f7",
-        "currentHealth": 0,
-        "maxHealth": 100,
         "playerStateManager": {
           "_type": "component",
           "component_id": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
@@ -220,39 +218,6 @@
               "component_id": "9b45c807-0c76-49ea-bdb3-fe873feee8da",
               "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
               "component_type": "PlayerControls"
-            }
-          }
-        ]
-      },
-      {
-        "__guid": "b8310b9a-ef8f-4196-9b44-7624d7a47d37",
-        "Flags": 0,
-        "Name": "Screen Canvas",
-        "Position": "-1224.409,-126.0521,57.26855",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.ScreenPanel",
-            "__guid": "3508b9bf-a121-4a64-843c-125ba63093a8",
-            "AutoScreenScale": true,
-            "Opacity": 1,
-            "Scale": 1,
-            "ZIndex": 100
-          },
-          {
-            "__type": "PlayerHud",
-            "__guid": "7907f303-86f0-49ba-8ce0-cd9c840acbd4",
-            "playerStateManager": {
-              "_type": "component",
-              "component_id": "99303e85-44e3-4e5e-b4b9-361f30c896b2",
-              "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-              "component_type": "PlayerStateManager"
-            },
-            "playerTimer": {
-              "_type": "component",
-              "component_id": "45d91dba-6305-44a3-b9f0-c40c5c1d6bcd",
-              "go": "faeb51b7-b410-4603-a2ab-bfba3135080c",
-              "component_type": "PlayerTimer"
             }
           }
         ]
