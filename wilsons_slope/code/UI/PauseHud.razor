@@ -5,8 +5,8 @@
 <root class="@(isPaused ? "" : "hide") ">
 	<h2>Paused</h2>
 	<div class="options">
-		<div class="button">Resume</div>
-		<div class="button">Exit</div>
+		<div class="button" onclick=@OnResume>Resume</div>
+		<div class="button" onclick=@OnExit>Return to main menu</div>
 	</div>
 
 </root>
@@ -19,15 +19,23 @@
 	
 		if(Input.EscapePressed)
 		{
-			
 			isPaused = !isPaused;
-			Log.Info(isPaused);
 		}
 		/* Scene.TimeScale = isPaused ? 0 : 1;
 		This currently is behaving weird , player finishes and movement they have
 		but animations pause, props still will move. This is fine as we eventually
 		want multiplayer but for initial release there's no pausing game
 		*/
+	}
+	void OnResume()
+	{
+		Log.Info("Game resumed");
+		isPaused = !isPaused;
+	}
+	void OnExit()
+	{
+		Log.Info("Exited Game");
+		Scene.Load(SceneManager.Instance.GetSceneFile(0));
 	}
 	
 	protected override int BuildHash() => System.HashCode.Combine( isPaused );
