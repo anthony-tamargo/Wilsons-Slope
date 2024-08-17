@@ -3,10 +3,11 @@
 @inherits PanelComponent
 
 <root class="@(isPaused ? "" : "hide") ">
-	<h2>Paused</h2>
+	<h2>Menu</h2>
 	<div class="options">
 		<div class="button" onclick=@OnResume>Resume</div>
-		<div class="button" onclick=@OnExit>Return to main menu</div>
+		<div class="button" onclick=@OnRestart>Restart</div>
+		<div class="button" onclick=@OnExit>Main Menu</div>
 	</div>
 
 </root>
@@ -31,6 +32,10 @@
 	{
 		Log.Info("Game resumed");
 		isPaused = !isPaused;
+	}
+	void OnRestart()
+	{
+		Log.Info("Restarted");
 	}
 	void OnExit()
 	{

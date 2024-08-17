@@ -33,7 +33,6 @@
       "Flags": 0,
       "Name": "Prop Spawners",
       "Position": "1930.088,0,1210.63",
-      "Enabled": true,
       "Children": [
         {
           "__guid": "a64af4db-43db-400a-ab81-3c94a70c162b",
@@ -71,8 +70,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7888567,
+                "Relative": -82776288,
+                "Passed": 82776290.14729041,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -122,8 +121,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7890925,
+                "Relative": -82776288,
+                "Passed": 82776290.14750381,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -173,8 +172,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.78916569,
+                "Relative": -82776288,
+                "Passed": 82776290.14756191,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -224,8 +223,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7892308,
+                "Relative": -82776288,
+                "Passed": 82776290.1475805,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -275,8 +274,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.78925,
+                "Relative": -82776288,
+                "Passed": 82776290.1475971,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -326,8 +325,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.78930719,
+                "Relative": -82776288,
+                "Passed": 82776290.1476132,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -377,8 +376,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7893413,
+                "Relative": -82776288,
+                "Passed": 82776290.1476281,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -428,8 +427,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7894729,
+                "Relative": -82776288,
+                "Passed": 82776290.1476431,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -479,8 +478,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7896059,
+                "Relative": -82776288,
+                "Passed": 82776290.1476587,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -530,8 +529,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7896749,
+                "Relative": -82776288,
+                "Passed": 82776290.1476749,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -581,8 +580,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7897808,
+                "Relative": -82776288,
+                "Passed": 82776290.1476905,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -632,8 +631,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7898133,
+                "Relative": -82776288,
+                "Passed": 82776290.1477063,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -683,8 +682,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7898731,
+                "Relative": -82776288,
+                "Passed": 82776290.1477208,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -734,8 +733,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7899053,
+                "Relative": -82776288,
+                "Passed": 82776290.1477361,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -785,8 +784,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.78994049,
+                "Relative": -82776288,
+                "Passed": 82776290.1477513,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -836,8 +835,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7899568,
+                "Relative": -82776288,
+                "Passed": 82776290.1477664,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -887,8 +886,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7899764,
+                "Relative": -82776288,
+                "Passed": 82776290.1477838,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -938,8 +937,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7899954,
+                "Relative": -82776288,
+                "Passed": 82776290.14779821,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -989,8 +988,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7900143,
+                "Relative": -82776288,
+                "Passed": 82776290.1478143,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1040,8 +1039,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7900331,
+                "Relative": -82776288,
+                "Passed": 82776290.1478296,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1091,8 +1090,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7900525,
+                "Relative": -82776288,
+                "Passed": 82776290.14784521,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0
@@ -1142,8 +1141,8 @@
                 15
               ],
               "timeUntilSpawn": {
-                "Relative": -82747304,
-                "Passed": 82747302.7900688,
+                "Relative": -82776288,
+                "Passed": 82776290.1478607,
                 "Fraction": 1
               },
               "totalSpawnProbability": 0

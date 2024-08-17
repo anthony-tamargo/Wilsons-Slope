@@ -1,0 +1,68 @@
+LeaderboardSection
+{
+	position: absolute;
+	top: 25%;
+	left: 5%;
+	right: 0;
+	bottom: 0;
+	background-color: #373A40;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	border-radius: 20px;
+	width:30%;
+	height:60%;
+	z-index: 99;
+
+	.title-wrapper
+	{
+		position: absolute;
+		top:2%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-family: Poppins;
+
+
+		>.title
+		{
+			color:pink;
+			font-size: 45px;	
+		}
+		>.subtitle
+		{
+			font-size:35px;
+			color:pink;
+		}
+	}
+	.entry-wrapper{
+		flex-direction: column;
+
+		.entry{
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 0 8px;
+
+			.rank{
+				width:15%;
+				padding-right: 8px;;
+			}
+			.username{
+				width: 60%;
+				label{
+					white-space: nowrap;
+				}
+			}
+			.time{
+				width:25%;
+				justify-content: flex-end;
+			}
+		}
+		.entry.me{
+			background-color: #0FA2F0;
+			color: black;
+		}
+	}
+	
+
+}

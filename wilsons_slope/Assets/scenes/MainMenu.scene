@@ -46,6 +46,12 @@
         {
           "__type": "MainMenu",
           "__guid": "ed9cb7c5-b253-4aa1-8bd1-ba854f4000a8"
+        },
+        {
+          "__type": "LeaderboardSection",
+          "__guid": "0ee52f73-36e0-4581-a73d-abdfdd2b35c4",
+          "boardGroup": "global",
+          "boardName": "time"
         }
       ]
     },

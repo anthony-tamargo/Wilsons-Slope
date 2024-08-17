@@ -1,6 +1,8 @@
 using System;
 using System.Security.Cryptography;
+using Microsoft.VisualBasic;
 using Sandbox;
+using Sandbox.Services;
 
 public sealed class PlayerTimer : Component
 {
@@ -8,7 +10,7 @@ public sealed class PlayerTimer : Component
 	public float playerFinishedTime { get; private set; }
 	public bool isTimerActive { get; private set; }
 	public TimeSince playerTimeSinceRoundStart{ get; private set; }
-
+	
 
 	protected override void OnStart()
 	{
@@ -63,21 +65,32 @@ public sealed class PlayerTimer : Component
 		if(GameManager.Instance.playerBestTimeReference == 0)
 		{
 			GameManager.Instance.playerBestTimeReference = playerCurrentTime;
-			// this is kinda stupid but may work
+			
+			// if player has no best time on record, initialize it to 0
 		}
 
 		if(playerCurrentTime < GameManager.Instance.playerBestTimeReference )
 		{
 			GameManager.Instance.playerBestTimeReference = playerCurrentTime;
+			UpdatePlayerStats(playerCurrentTime);
 		}
 		else
 		{
 			GameManager.Instance.playerBestTimeReference = GameManager.Instance.playerBestTimeReference;
 		}
+		
 	}
 	public float ReturnPlayerBestTime()
 	{
 		return GameManager.Instance.playerBestTimeReference;
+	}
+
+	public void UpdatePlayerStats(float time)
+	{
+		Stats.SetValue("time",time);
+
+		Stats.Flush();
+		
 	}
 
 

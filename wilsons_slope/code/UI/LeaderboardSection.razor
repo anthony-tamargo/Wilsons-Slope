@@ -1,0 +1,50 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.Services
+@using System;
+@using System.Threading.Tasks;
+@inherits PanelComponent
+
+<root>
+	<div class="title-wrapper">
+		<div class="title">Best Times</div>
+		<div class="subtitle">Global</div>
+	</div>
+	<div class="entry-wrapper">
+		<div class="entry">
+			@foreach (var entry in Entries)
+			{
+				<div class="entry @(entry.Me ? "me" : "") ">
+					<div class="rank">@entry.Rank</div>
+					<div class="username">@entry.DisplayName</div>
+					<div class="time">@entry.Value</div>
+				</div>
+			}
+		</div>
+	</div>
+</root>
+
+@code
+{
+	[Property] public string boardName {get; set;}
+	[Property] public string boardGroup {get;set;}
+	
+	private string Title => boardRef?.DisplayName ?? "Loading...";
+	private string Subtitle => boardRef?.Title ?? "";
+	private Leaderboards.Entry[] Entries => boardRef?.Entries ?? Array.Empty<Leaderboards.Entry>();
+	
+	private Leaderboards.Board? boardRef;
+
+	protected override void OnEnabled()
+	{
+		var boardRef = Leaderboards.Get(boardName);
+		boardRef.MaxEntries = 10;
+		boardRef.Group = boardGroup;
+		_ = UpdateBoard();
+	}
+	private async Task UpdateBoard()
+	{
+		await boardRef!.Refresh();
+	}
+	protected override int BuildHash() => System.HashCode.Combine(boardName, boardGroup, Entries.Length );
+}
